@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996)
+#pragma warning(disable : 4996) // отключение ошибки c4996
 #include <stdio.h> // необходимо для коррктного вызова
 				   // функций ввода\вывода
 int main(void)	   // главная функция main не принимает
