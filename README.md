@@ -1,0 +1,2 @@
+# Osnovy
+for magic
