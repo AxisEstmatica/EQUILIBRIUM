@@ -1,2 +1,3 @@
 # Osnovy
-for magic
+For magic
+Попытка - не пытка
