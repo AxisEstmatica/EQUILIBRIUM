@@ -1,0 +1,18 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/Anistrix/Documents/ГУАП 1842/Github/Osnovy/Clion/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_2efee/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_2efee.dir\build.make CMakeFiles/cmTC_2efee.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Anistrix/Documents/├╙└╧ 1842/Github/Osnovy/Clion/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2efee.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_2efee.dir\testCCompiler.c.obj   -c "C:\Users\Anistrix\Documents\╨У╨г╨Р╨Я 1842\Github\Osnovy\Clion\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c"
+gcc.exe: error: C:\Users\Anistrix\Documents\ж╙жуж╨ж▀ 1842\Github\Osnovy\Clion\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+CMakeFiles\cmTC_2efee.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_2efee.dir/testCCompiler.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_2efee.dir/testCCompiler.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Anistrix/Documents/├╙└╧ 1842/Github/Osnovy/Clion/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:120: recipe for target 'cmTC_2efee/fast' failed
+mingw32-make.exe: *** [cmTC_2efee/fast] Error 2
+
+
