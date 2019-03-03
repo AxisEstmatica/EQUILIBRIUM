@@ -21,15 +21,17 @@ int main(void) //
 
 void process_line(char buffer[]) //
 {
-	char c;  // текущий символ
+	int c;  // текущий символ
 	int prev_c; // предыдущий символ
 	int flag; // признак разделения слов
 	int C; // первый символ
 	int i; // позиция символа
 	int post_i; // позиция символа в финальном варианте
 	int j; // позиция начала слова
+	int found; // признак отсутствия слова
 
 	// ну понеслаааась
+	found = NO;
 	flag = NO;
 	C = buffer[0]; // присваеваем первый символ, чтобы не потерять его
 	j = 0;
@@ -42,12 +44,16 @@ void process_line(char buffer[]) //
 	do // цикл с постусловием
 	{
 		c = buffer[i];
+		if ((c < 'a' && c < 'z' || c < 'A' && c < 'Z') && (c != ' ' && c != '.' && c != ',' && c != '\n' && c != '\0')) // проверка на не слово
+		{
+			found = YES;
+		}
 		if (c == ' ' || c == '.' || c == ',' || c == '\n' || c == '\0') //
 		{
 			flag = YES;
-			if (prev_c == C) //
+			if (prev_c == C && found != YES) //
 			{
-
+				
 			}
 			else
 			{
@@ -59,6 +65,7 @@ void process_line(char buffer[]) //
 				buffer[post_i] = c; //
 				++post_i;
 			}
+			found = NO;
 
 		}
 		else
