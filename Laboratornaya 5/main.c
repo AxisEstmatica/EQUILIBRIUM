@@ -3,28 +3,28 @@
 
 #define YES 1
 #define NO 0
-#define N 10 // da potomushto zifr budet desyat'
+#define N 10 // потому что цифр будет 10
 
-void process_MAS(int buffer[]); // ob'yavlyaem nashu funktsi'yu
-int MAX(int buffer[]); // ishem max
-int MIN(int buffer[]); // ishem min
+void process_MAS(int buffer[]); // рабочая функция
+int MAX(int buffer[]); // ищем наибольшее значение
+int MIN(int buffer[]); // ищем наименьшее значение
 
 int main(void)
 {
-	int MAS[N]; // ob'yavla'em massiv MAS dlya zelih chisel
+	int MAS[N]; // объявляем массив для целых чисел
 	int i;
 	printf("Enter 10 integer numbers\n");
 
-	for (i = 0; i < N; ++i) // mi zadayem znachenia dlya massiva, oni zeliie
+	for (i = 0; i < N; ++i) // задаём значения массива
 	{
-		printf("Number %d:", i+1); // prekrasno rabotayet
+		printf("Number %d:", i+1); // работает...
 			scanf("%d", &MAS[i]);
 	}
 
-	process_MAS (MAS); // telo; vishnevaya semerka, neonovie fari...
+	process_MAS (MAS); // обнуляем значения между мин и макс
 	
 	printf("Result:");
-	for (i = 0; i < N; ++i) // vivodim massiv
+	for (i = 0; i < N; ++i) // выводим массив
 	{
 		printf(" %d", MAS[i]);
 	}
@@ -32,22 +32,22 @@ int main(void)
 	return 0; // radyemsya
 }
 
-void process_MAS(int buffer[]) // mi opisyvayem nashu funktsiuu
+void process_MAS(int buffer[]) // описываем нашу функцию
 {
 	int i;
-	int max; // maximalnii element
-	int min; // minimalnii element
-	int n_max; // (nuzhno li?) nomer maximal'nogo elementa
-	int n_min; // (nuzhno li?) nomer naimenshigo elementa
-	int flag_max; // flazhok max
-	int flag_min; // flazhok min
+	int max; // максимальный элемент
+	int min; // минимальный элемент
+	int n_max; // номер наибольшего элемента
+	int n_min; // номер наименьшего элемента
+	int flag_max; // флажок НБ значения
+	int flag_min; // флажок НМ значения
 	flag_max = NO;
 	flag_min = NO;
 	
 	max = MAX(buffer);
 	min = MIN(buffer);
 
-	if (max == min) // zashita ot bespoleznih deystvii
+	if (max == min) // защита от бесполезных действий
 	{
 		i = 10;
 	}
@@ -58,12 +58,12 @@ void process_MAS(int buffer[]) // mi opisyvayem nashu funktsiuu
 
 	while (i < N)
 	{
-		if (buffer[i] == max) // nahodim positsiuu max
+		if (buffer[i] == max) // находим позицию НБ значения
 		{
 			flag_max = YES;
 			n_max = i;
 		}
-		if (buffer[i] == min) // nahodim pozitsiuu min
+		if (buffer[i] == min) // находим позицию НМ значения
 		{
 			flag_min = YES;
 			n_min = i;
@@ -72,50 +72,50 @@ void process_MAS(int buffer[]) // mi opisyvayem nashu funktsiuu
 		{
 			if (n_max < n_min)
 			{
-				// esli dobavit' to chto v else no ot max do min to budet luche
+				// можно добавить обратное else и будет обнулять от НБ до НМ
 			}
 			else
 			{
-				for (++n_min; n_min < n_max; ++n_min) // obnulyaem ot min do max
+				for (++n_min; n_min < n_max; ++n_min) // обнуляем от НМ до НБ
 				{
 					buffer[n_min] = 0;
 				}
 			}
 			flag_max = NO;
 			flag_min = NO;
-			--i; // shtob ne upustil min ili max
+			--i; // чтобы не упустили НБ или НМ значение
 		}
 
 		++i;
 	}
 }
 
-int MAX(int buffer[]) // tut mi ishem min
+int MAX(int buffer[]) // ищем НБ значение
 {
 	int i;
 	int max;
 	max = buffer[0];
 	for (i = 1; i < N; ++i)
 	{
-		if (buffer[i] > max) // esli bolshe to bolshe
+		if (buffer[i] > max) // если больше, то больше
 		{
 			max = buffer[i];
 		}
 	}
-	return max;
+	return max; // возвращаем НБ значение
 }
 
-int MIN(int buffer[]) // tut mi ishem max
+int MIN(int buffer[]) // ищем НМ значение
 {
 	int i;
 	int min;
 	min = buffer[0];
 	for (i = 1; i < N; ++i)
 	{
-		if (buffer[i] < min) // esli men'she to menshe
+		if (buffer[i] < min) // если мньше, то меньше
 		{
 			min = buffer[i];
 		}
 	}
-	return min;
+	return min; // возвращаем НМ значение
 }
