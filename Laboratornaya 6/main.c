@@ -29,7 +29,7 @@ int main(void)
 		}
 	}
 
-	for (i = 0; i < N; i++)
+	for (i = 0; i < N; i++) // ishem ariphmeticheskuu progressiu
 	{
 		flag = YES;
 		diff = MAS[i][0] - MAS[i][1];
