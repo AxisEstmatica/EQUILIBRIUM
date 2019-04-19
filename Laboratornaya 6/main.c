@@ -1,31 +1,24 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г®ГёГЁГЎГЄГЁ c4996
 #include <stdio.h>
 
 #define YES 1
 #define NO 0
-#define MAX 100 // kak po mne tak i 10 dostatochno, nu da ladno
+#define N 10 
+#define K 10
 
 int main(void)
 {
 	int MAS[MAX][MAX]; // ob'yavlyaem dvumernii massiv
-	int N; // stroka
-	int K; // stolbets
 	int i; // po strokam
 	int j; // po stolbzam
 	int flag; // flazhok
 	int diff; // raznost'
 
-	printf("N = "); // zada'yom N i K
-	scanf("%d", &N);
-	printf("K = ");
-	scanf("%d", &K);
-
 	for (i = 0; i < N; i++) // zada'yom massiv
 	{
 		for (j = 0; j < K; j++)
 		{
-			printf("Element number %d %d: ", i + 1, j + 1);
-			scanf("%d", &MAS[i][j]);
+			MAS[i][j] = rand();
 		}
 	}
 
