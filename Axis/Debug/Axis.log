@@ -1,0 +1,24 @@
+﻿Построение начато 19.04.2019 10:06:01.
+     1>Проект "C:\Users\user\Desktop\Axis\Axis.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Axis.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
+         main.c
+     1>c:\users\user\desktop\axis\main.c(28): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(277): см. объявление "gets"
+     1>c:\users\user\desktop\axis\main.c(65): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Desktop\Axis\Debug\Axis.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Axis.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\user\Desktop\Axis\Debug\Axis.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Desktop\Axis\Debug\Axis.lib" /MACHINE:X86 Debug\main.obj
+         LINK : не найден или не выполнена сборка C:\Users\user\Desktop\Axis\Debug\Axis.exe при последней инкрементной компоновке; выполняется полная компоновка
+         Axis.vcxproj -> C:\Users\user\Desktop\Axis\Debug\Axis.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\user\Desktop\Axis\Debug\Axis.exe;#1" /manifest Debug\Axis.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Файл "Debug\Axis.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Axis.lastbuildstate".
+     1>Построение проекта "C:\Users\user\Desktop\Axis\Axis.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.34
