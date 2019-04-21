@@ -1,2 +1,26 @@
 ﻿  main.c
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(25): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(25): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "__int64"
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(25): note: рекомендуется использовать "%lld" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(25): note: рекомендуется использовать "%Id" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(25): note: рекомендуется использовать "%I64d" в строке форматирования
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(41): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(41): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "__int64"
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(41): note: рекомендуется использовать "%lld" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(41): note: рекомендуется использовать "%Id" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(41): note: рекомендуется использовать "%I64d" в строке форматирования
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(77): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(77): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "__int64"
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(77): note: рекомендуется использовать "%lld" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(77): note: рекомендуется использовать "%Id" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(77): note: рекомендуется использовать "%I64d" в строке форматирования
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(93): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(93): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "__int64"
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(93): note: рекомендуется использовать "%lld" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(93): note: рекомендуется использовать "%Id" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(93): note: рекомендуется использовать "%I64d" в строке форматирования
+c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(100): warning C4477: "printf": в строке форматирования "%ld" требуется аргумент типа "long", но вариативный аргумент "1" имеет тип "__int64"
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(100): note: рекомендуется использовать "%lld" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(100): note: рекомендуется использовать "%Id" в строке форматирования
+  c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 7\laboratornaya 7\main.c(100): note: рекомендуется использовать "%I64d" в строке форматирования
   Laboratornaya 7.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\2 семестр\Основы программирования\Laboratornaya 7\x64\Debug\Laboratornaya 7.exe
