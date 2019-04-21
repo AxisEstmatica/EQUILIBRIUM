@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int MAS[MAX][MAX]; // ob'yavlyaem dvumernii massiv
+	int MAS[N][K+1]; // ob'yavlyaem dvumernii massiv
 	int i; // po strokam
 	int j; // po stolbzam
 	int flag; // flazhok
@@ -18,8 +18,17 @@ int main(void)
 	{
 		for (j = 0; j < K; j++)
 		{
-			MAS[i][j] = rand();
+			MAS[i][j] = rand(i+j);
 		}
+	}
+
+	for (i = 0; i < N; i++) // zada'yom massiv
+	{
+		for (j = 0; j < K; j++)
+		{
+			printf("%d ",MAS[i][j]);
+		}
+		printf("\n");
 	}
 
 	for (i = 0; i < N; i++) // ishem ariphmeticheskuu progressiu
