@@ -1,3 +1,5 @@
 ﻿  main.c
-c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 6\laboratornaya 6\laboratornaya 6\main.c(21): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 6\laboratornaya 6\laboratornaya 6\main.c(17): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 6\laboratornaya 6\laboratornaya 6\main.c(17): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 6\laboratornaya 6\laboratornaya 6\main.c(23): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
   Laboratornaya 6.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\Github\Osnovy\Laboratornaya 6\Laboratornaya 6\x64\Debug\Laboratornaya 6.exe

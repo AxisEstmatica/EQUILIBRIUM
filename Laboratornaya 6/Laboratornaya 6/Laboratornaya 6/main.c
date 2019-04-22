@@ -14,6 +14,8 @@ int main(void)
 	int flag; // flazhok
 	int diff; // raznost'
 
+	srand(time(NULL));
+
 	for (i = 0; i < N; i++) // zada'yom massiv
 	{
 		for (j = 0; j < K; j++)
