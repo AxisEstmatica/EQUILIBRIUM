@@ -20,7 +20,7 @@ int main(void)
 	{
 		for (j = 0; j < K; j++)
 		{
-			MAS[i][j] = rand(i + j);
+			MAS[i][j] = rand();
 			printf("%d ",MAS[i][j]);
 		}
 		printf("\n");
@@ -30,7 +30,7 @@ int main(void)
 	{
 		flag = YES;
 		diff = MAS[i][0] - MAS[i][1];
-		for (j = 1; j < K - 1; j++)
+		for (j = 1; j < K; j++)
 		{
 			if (diff != MAS[i][j] - MAS[i][j + 1])
 			{
