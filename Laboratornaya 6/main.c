@@ -20,14 +20,7 @@ int main(void)
 	{
 		for (j = 0; j < K; j++)
 		{
-			MAS[i][j] = rand(i+j);
-		}
-	}
-
-	for (i = 0; i < N; i++) // zada'yom massiv
-	{
-		for (j = 0; j < K; j++)
-		{
+			MAS[i][j] = rand(i + j);
 			printf("%d ",MAS[i][j]);
 		}
 		printf("\n");
