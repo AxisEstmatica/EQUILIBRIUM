@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г®ГёГЁГЎГЄГЁ c4996
 #include <stdio.h>
 #define YES 1
 #define NO 0
@@ -59,12 +59,12 @@ int main(void)
 		N = N << 1; // sdvig vlevo na 1 razryad
 	}
 
-	if (((~N + 1) >> 31 & 1) == 1)
+	if (((~N + 1) >> 31 & 1) == 1 && K != 0)
 	{
 		N = -N;
 	}
 
-	if (((~N + 1) >> 31 & 1) == 0 && N < 0)
+	if (((~N + 1) >> 31 & 1) == 0 && N < 0 && K != 0)
 	{
 		N = -N;
 	}
