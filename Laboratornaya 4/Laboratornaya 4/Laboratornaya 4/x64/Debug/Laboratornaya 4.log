@@ -1,3 +1,3 @@
 ﻿  main.c
-c:\users\anistrix\documents\гуап 1842\2 семестр\основы программирования\laboratornaya 4\laboratornaya 4\main.c(15): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
-  Laboratornaya 4.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\2 семестр\Основы программирования\Laboratornaya 4\x64\Debug\Laboratornaya 4.exe
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 4\laboratornaya 4\laboratornaya 4\main.c(15): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+  Laboratornaya 4.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\Github\Osnovy\Laboratornaya 4\Laboratornaya 4\x64\Debug\Laboratornaya 4.exe
