@@ -1,3 +1,3 @@
 ﻿  main.c
-c:\users\anistrix\documents\гуап 1842\2 семестр\летняя практика\digit\digit\main.c(78): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+c:\users\anistrix\documents\гуап 1842\2 семестр\летняя практика\digit\digit\main.c(75): warning C4554: ">>": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
   DIGIT.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\2 семестр\ЛЕТНЯЯ ПРАКТИКА\DIGIT\x64\Debug\DIGIT.exe

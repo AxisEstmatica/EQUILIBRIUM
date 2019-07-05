@@ -18,8 +18,6 @@ int CONTROL(int i, int j); // вычисление контрольного би
 
 int main(void)
 {
-	//int filestr[STR]; // int or char? не понадобится - убрать
-
 	FILE *fp; // потом объединю в функцию "файл"
 	fp = fopen("text.txt", "r");
 	
@@ -55,7 +53,6 @@ int main(void)
 
 void KODER(void)
 {
-	//int MTR[K+1][4]; // MATRIX
 	int n; // переменная
 	int pos; // позиция символа
 	char c; // текущий символ
@@ -71,7 +68,7 @@ void KODER(void)
 	for (i = 0; (c = filestr[i]) != '\0'; ++i, j = 0)
 	{
 		printf(" %c ", c); // uberu
-		for (n = 0, pos = n + i * K; n < 8; ++n, ++pos, ++j) // в чаре 8 бит, потом уберу n в вычислении pos
+		for (n = 0, pos = i * K; n < 8; ++n, ++pos, ++j) // в чаре 8 бит, потом уберу n в вычислении pos
 		{
 			if (j != 0 && j != 1 && j != 3 && j != 7)
 			{
@@ -91,23 +88,6 @@ void KODER(void)
 			}
 		}
 	}
-
-	// создание матрицы преобразования uberu
-	//
-	for (i = 0; i < 4; ++i) // uberu
-	{
-		//MTR[K][i] = i + 1;
-	}
-
-	for (i = 0; i < 4; ++i) // uberu
-	{
-		for (j = 0; j < K; ++j)
-		{
-			
-		}
-	}
-	//
-	// вычисление контрольных битов
 }
 
 int CONTROL(int i, int j)
