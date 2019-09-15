@@ -1,4 +1,13 @@
 ﻿  main.c
-c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 4\laboratornaya 4\main.c(15): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
-c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 4\laboratornaya 4\main.c(24): warning C4133: инициализация: несовместимые типы - из "char *" в "int *"
-  Laboratornaya 4.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 4\x64\Debug\Laboratornaya 4.exe
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(15): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4313: printf: конфликт "%d" в строке формата с аргументом 1 типа "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4313: printf: конфликт "%d" в строке формата с аргументом 2 типа "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(19): warning C4313: printf: конфликт "%d" в строке формата с аргументом 3 типа "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(16): warning C4133: инициализация: несовместимые типы - из "char *" в "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(17): warning C4047: инициализация: "int *" отличается по уровням косвенного обращения от "char"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(18): warning C4133: инициализация: несовместимые типы - из "char *" в "int *"
+c:\users\anistrix\documents\гуап 1842\github\osnovy\laboratornaya 8\laboratornaya 4\main.c(28): warning C4133: инициализация: несовместимые типы - из "char *" в "int *"
+  Laboratornaya 4.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\Github\Osnovy\Laboratornaya 8\x64\Debug\Laboratornaya 4.exe

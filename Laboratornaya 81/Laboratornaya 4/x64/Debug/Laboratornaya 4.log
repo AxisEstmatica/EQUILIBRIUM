@@ -1,0 +1,4 @@
+﻿  main.c
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 81\laboratornaya 4\main.c(16): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 81\laboratornaya 4\main.c(13): warning C4133: инициализация: несовместимые типы - из "char *" в "int *"
+  Laboratornaya 4.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 81\x64\Debug\Laboratornaya 4.exe

@@ -10,15 +10,12 @@ void process_line(int *line_ptr); // объ€вл€ем функцию
 int main(void) //
 {
 	char line[MAXLINE]; //
+	int *line_ptr = line; // указатель на начало массива
 	//
-	printf("Please, enter some words,\nWARNING: words that start and end on similar letter will be deleted\n");
+	printf("Please, enter some words,\nWords that start and end on similar letter will be deleted:\n");
 	gets(line);  // считываем строку до конца файла и запихиваем в массив line
-	int *ptr1 = line;
-	int *ptr2 = line[0];
-	int *ptr3 = &line[0];
-	printf("1 = %d, 2 = %d, 3 = %d\n", ptr1, ptr2, ptr3);
-	int *line_ptr = line;
-	process_line(*line_ptr); // выполн€ем функцию над массивом line
+	//line_ptr = line; // присваиваем начало массива указателю
+	process_line(line_ptr); // выполн€ем функцию над массивом line
 	printf("Result:\n");
 	puts(line); // выводим массив line
 	return 0;
@@ -26,11 +23,11 @@ int main(void) //
 
 void process_line(int *line_ptr) // тело функции
 {
-	//int *buf_ptr = buffer;
-	int c;  // текущий символ
-	int prev_c; // предыдущий символ
+	//int *line_ptr = &line[0];
+	char c;  // текущий символ
+	char prev_c; // предыдущий символ
 	int flag; // признак разделени€ слов
-	int E; // первый символ
+	char E; // первый символ
 	int i; // позици€ символа
 	int post_i; // позици€ символа в финальном варианте
 	int j; // позици€ начала слова
@@ -49,10 +46,10 @@ void process_line(int *line_ptr) // тело функции
 
 	do // цикл с постусловием
 	{
-		c = line_ptr;
+		c = *(line_ptr+i);
 		if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c != ' ' && c != '.' && c != ',' && c != '\n' && c != '\0' && c != '\t')) // проверка на не слово
 		{
-			found = YES;
+			found = YES; // это не слово
 		}
 		if (c == ' ' || c == '.' || c == ',' || c == '\n' || c == '\0' || c == '\t') // проверка конец слова
 		{
@@ -63,19 +60,19 @@ void process_line(int *line_ptr) // тело функции
 			}
 			else
 			{
-				if (buffer[i-1] == ' ' || buffer[i-1] == '.' || buffer[i-1] == ',' || buffer[i-1] == '\n' || buffer[i-1] == '\0' || buffer[i-1] == '\t') // если предыдущий символ разделитель, то...
+				if (*(line_ptr + i-1) == ' ' || *(line_ptr + i - 1) == '.' || *(line_ptr + i - 1) == ',' || *(line_ptr + i - 1) == '\n' || *(line_ptr + i - 1) == '\t') // если предыдущий символ разделитель, то...
 				{
 					++post_i;
-					buffer[post_i] = c; // просто ставим разделитель
+					*(line_ptr+post_i) = c; // просто ставим разделитель
 				}
 				else
 				{
 					for (++post_i; j < i; ++j) // перезапись слова в тот-же массив
 					{
-						buffer[post_i] = buffer[j]; // присвоение
+						*(line_ptr + post_i) = *(line_ptr + j); // присвоение
 						++post_i;
 					}
-					buffer[post_i] = c; // устанавливаем разделитель между словами
+					*(line_ptr + post_i) = c; // устанавливаем разделитель между словами
 				}
 			}
 			found = NO;
@@ -94,5 +91,6 @@ void process_line(int *line_ptr) // тело функции
 		++i;
 	} 
 	while (c != '\0'); // цикл работает до конца файла
-	buffer[++post_i] = '\0';// устанавливаем конец файла
+	++post_i;
+	*(line_ptr + post_i) = '\0';// устанавливаем конец файла
 }
