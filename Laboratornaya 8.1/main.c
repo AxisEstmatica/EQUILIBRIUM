@@ -5,12 +5,12 @@
 #define NO 0
 #define MAXLINE 1000
 //
-void process_line(int *line_ptr); // объ€вл€ем функцию
+void process_line(char *line_ptr); // объ€вл€ем функцию
 
 int main(void) //
 {
 	char line[MAXLINE]; //
-	int *line_ptr = line; // указатель на начало массива
+	char *line_ptr = line; // указатель на начало массива
 	//
 	printf("Please, enter some words,\nWords that start and end on similar letter will be deleted:\n");
 	gets(line);  // считываем строку до конца файла и запихиваем в массив line
@@ -21,7 +21,7 @@ int main(void) //
 	return 0;
 }
 
-void process_line(int *line_ptr) // тело функции
+void process_line(char *line_ptr) // тело функции
 {
 	//int *line_ptr = &line[0];
 	char c;  // текущий символ
@@ -56,7 +56,11 @@ void process_line(int *line_ptr) // тело функции
 			flag = YES; // нашли разделитель
 			if ((prev_c - 'A' == E - 'A' || prev_c - 'a' == E - 'a' || prev_c - 'a' == E - 'A' || prev_c - 'A' == E - 'a') && found != YES) // проверка на условие
 			{
-				
+				if ((E < 'a' || E > 'z') && (E < 'A' || E > 'Z')) // фикс того когда после рандомного знака не буквы сжираютс€ разделители
+				{
+					++post_i;
+					*(line_ptr + post_i) = c; // просто ставим разделитель
+				}
 			}
 			else
 			{
