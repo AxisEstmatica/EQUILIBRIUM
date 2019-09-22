@@ -1,20 +1,18 @@
 #pragma warning(disable : 4996) // отключение ошибки c4996
 #include <stdio.h>
-//
 #define YES 1
 #define NO 0
 #define MAXLINE 1000
-//
+
 void process_line(char *line_ptr); // объ€вл€ем функцию
 
 int main(void) //
 {
 	char line[MAXLINE]; //
 	char *line_ptr = line; // указатель на начало массива
-	//
+	
 	printf("Please, enter some words,\nWords that start and end on similar letter will be deleted:\n");
 	gets(line);  // считываем строку до конца файла и запихиваем в массив line
-	//line_ptr = line; // присваиваем начало массива указателю
 	process_line(line_ptr); // выполн€ем функцию над массивом line
 	printf("Result:\n");
 	puts(line); // выводим массив line
@@ -23,7 +21,6 @@ int main(void) //
 
 void process_line(char *line_ptr) // тело функции
 {
-	//int *line_ptr = &line[0];
 	char c;  // текущий символ
 	char prev_c; // предыдущий символ
 	int flag; // признак разделени€ слов
@@ -33,7 +30,6 @@ void process_line(char *line_ptr) // тело функции
 	int j; // позици€ начала слова
 	int found; // признак отсутстви€ слова
 
-	// ну понеслаааась
 	found = NO;
 	flag = NO;
 	E = *line_ptr; // присваеваем первый символ, чтобы не потер€ть его
@@ -41,9 +37,7 @@ void process_line(char *line_ptr) // тело функции
 	prev_c = *line_ptr; // та же причина
 	i = 0; // потому что массивы начинаютс€ с нул€
 	post_i = -1; // особенноесть for
-
 	// читаем строчки
-
 	do // цикл с постусловием
 	{
 		c = *(line_ptr+i);
