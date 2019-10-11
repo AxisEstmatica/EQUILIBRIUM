@@ -1,3 +1,3 @@
 ﻿  main.c
-c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 9\laboratornaya 9\main.c(39): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 9\laboratornaya 9\main.c(33): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
   Laboratornaya 9.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 9\x64\Debug\Laboratornaya 9.exe

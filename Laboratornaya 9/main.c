@@ -1,14 +1,10 @@
 #pragma warning(disable : 4996) // отключение ошибки c4996
 #include <stdio.h>
-//
 #define YES 1
 #define NO 0
 #define STR 1024
 char filestr[STR];
-
-//int i = 1; // счЄтчик, а он используетс€?
 char c; // текущий символ
-//
 
 void erasespace(void); // удал€ем лишние пробелы
 void mirrortext(void); // содержимое файла текст на консоль
@@ -18,7 +14,6 @@ int main(void)
 {
 	printf("Current contents of the file text.txt:\n");
 	mirrortext();
-	// типа развилочку надо бы добавить про то мол изменить файл или оставить, подумаю...
 	erasespace();
 	printf("\nResult of processing (res.txt):\n");
 	mirrorres();
@@ -27,7 +22,6 @@ int main(void)
 
 void erasespace(void)
 {
-	//char last_w; // последний символ не разделитель
 	int CONTROL = NO;
 	char *filestr_ptr;
 	FILE *frd, *fwr; 
@@ -43,32 +37,16 @@ void erasespace(void)
 		filestr_ptr = fgets(filestr, STR, frd); // читаем строку
 		if (filestr_ptr == NULL)
 			break; // file end
-		//last_w = *filestr_ptr;
 		while (*filestr_ptr != '\0') // to string end
 		{
 			c = *filestr_ptr;
 			if (c == ' ' || c == ',' || c == '.' || c == '?' || c == '!' || c ==';' || c == ':') // если значение разделител€, то
 			{
-				if (c == ' ')
-				{
-					CONTROL = YES;
-				}
-				else
-				{
-					fprintf(fwr, "%c", c); // не пробел
-				}
+				c == ' ' ? CONTROL = YES : fprintf(fwr, "%c", c);
 			}
 			else
 			{
-				if (CONTROL == YES)
-				{
-					CONTROL = NO;
-					fprintf(fwr, " %c", c); // не разделитель, но с пробелом
-				}
-				else
-				{
-					fprintf(fwr, "%c", c); // не разделитель
-				}
+				*filestr == ' ' ? CONTROL = NO, *filestr = '.', fprintf(fwr, "%c", c) : CONTROL == YES ? CONTROL = NO, fprintf(fwr, " %c", c) : fprintf(fwr, "%c", c); // выбираем поставить разделитель с пробелом или без
 			}
 			++filestr_ptr;
 		}
