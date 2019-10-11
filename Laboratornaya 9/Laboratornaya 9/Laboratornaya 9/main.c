@@ -1,14 +1,14 @@
-#pragma warning(disable : 4996) // ���������� ������ c4996
+#pragma warning(disable : 4996) // отключение ошибки c4996
 #include <stdio.h>
 #define YES 1
 #define NO 0
-#define STR 1024
-char filestr[STR];
-char c; // ������� ������
+#define STR 1024 // в принципе этого должно хватить
+char filestr[STR]; // массив для очередной строки файла
+char c; // текущий символ
 
-void erasespace(void); // ������� ������ �������
-void mirrortext(void); // ���������� ����� ����� �� �������
-void mirrorres(void); // ���������� ����� ��� �� �������
+void erasespace(void); // удаляем лишние пробелы
+void mirrortext(void); // содержимое файла text.txt на консоль
+void mirrorres(void); // содержимое файла res.txt на консоль
 
 int main(void)
 {
@@ -25,30 +25,30 @@ void erasespace(void)
 	int CONTROL = NO;
 	char *filestr_ptr;
 	FILE *frd, *fwr; 
-	frd = fopen("text.txt", "rt"); // ��������� �������� ����
-	fwr = fopen("res.txt", "w"); // ��������� ���� ����������
-	if (frd == NULL || fwr == NULL)
+	frd = fopen("text.txt", "rt"); // открываем исходный файл
+	fwr = fopen("res.txt", "w"); // открываем файл результата
+	if (frd == NULL || fwr == NULL) // проверка на открытие файлов
 	{
 		printf("FILE HAS NOT BEEN OPENED");
 		exit(1);
 	}
-	while (!feof(frd)) // to end of file
+	while (!feof(frd)) // цикл до конца файла
 	{
-		filestr_ptr = fgets(filestr, STR, frd); // ������ ������
+		filestr_ptr = fgets(filestr, STR, frd); // читаем строку
 		if (filestr_ptr == NULL)
-			break; // file end
-		while (*filestr_ptr != '\0') // to string end
+			break; // указатель - не указатель (пуст)
+		while (*filestr_ptr != '\0') // цикл до конца строки
 		{
 			c = *filestr_ptr;
-			if (c == ' ' || c == ',' || c == '.' || c == '?' || c == '!' || c ==';' || c == ':') // ���� �������� �����������, ��
+			if (c == ' ' || c == ',' || c == '.' || c == '?' || c == '!' || c ==';' || c == ':') // если значение разделителя, то
 			{
-				c == ' ' ? CONTROL = YES : fprintf(fwr, "%c", c);
+				c == ' ' ? CONTROL = YES : fprintf(fwr, "%c", c); // если не пробел, то просто печатаем символ (разделитель)
 			}
 			else
 			{
-				*filestr == ' ' ? CONTROL = NO, *filestr = '.', fprintf(fwr, "%c", c) : CONTROL == YES ? CONTROL = NO, fprintf(fwr, " %c", c) : fprintf(fwr, "%c", c); // �������� ��������� ����������� � �������� ��� ���
+				*filestr == ' ' ? CONTROL = NO, *filestr = '.', fprintf(fwr, "%c", c) : CONTROL == YES ? CONTROL = NO, fprintf(fwr, " %c", c) : fprintf(fwr, "%c", c); // выбираем поставить разделитель с пробелом или без
 			}
-			++filestr_ptr;
+			++filestr_ptr; // идём дальше
 		}
 		fprintf(fwr, "\0");
 	}
@@ -61,12 +61,12 @@ void mirrortext(void)
 {
 	FILE *fp;
 	fp = fopen("text.txt", "rt");
-	if (fp == NULL) // � ��� �����?
+	if (fp == NULL) // проверка на открытие файла
 	{
 		printf("FILE HAS NOT BEEN OPENED");
 		exit(1);
 	}
-	while (!feof(fp))
+	while (!feof(fp)) // посимвольный вывод содержимого файла
 	{
 		c = fgetc(fp);
 		printf("%c", c);
@@ -78,12 +78,12 @@ void mirrorres(void)
 {
 	FILE *fp;
 	fp = fopen("res.txt", "rt");
-	if (fp == NULL) // � ��� �����?
+	if (fp == NULL) // проверка на открытие файла
 	{
 		printf("FILE HAS NOT BEEN OPENED");
 		exit(1);
 	}
-	while (!feof(fp))
+	while (!feof(fp)) // посимвольный вывод содержимого файла
 	{
 		c = fgetc(fp);
 		printf("%c", c);
