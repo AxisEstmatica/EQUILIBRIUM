@@ -31,7 +31,6 @@ int main(void)
 	//
 	printf("Enter phone number: "); // input need number
 	gets(ent);
-	int z = 0;
 	while (i < 7 && *name_ptr != '\0') // check number
 	{
 		while (*name_ptr < '0' || *name_ptr > '9')
@@ -44,7 +43,7 @@ int main(void)
 		name_ptr++;
 		ent_ptr++;
 		
-		(((*(name_ptr) < '0') || (*(name_ptr) > '9')) && (i < 7)) ? i = 0, cnt++, ent_ptr = ent : z++; // if next no number so zero
+		(((*(name_ptr) < '0') || (*(name_ptr) > '9')) && (i < 7)) ? i = 0, cnt++, ent_ptr = ent : NULL; // if next no number so zero
 	}
 	if (cnt == sizeof(bill) / sizeof(int)) // check existence of number
 	{
