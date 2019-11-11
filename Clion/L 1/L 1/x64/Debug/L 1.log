@@ -1,0 +1,4 @@
+﻿  main.c
+c:\users\anistrix\documents\гуап 1842\3 семестр\языки высокого уровня\l 1\l 1\main.c(33): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\языки высокого уровня\l 1\l 1\main.c(47): warning C4047: :: "char *" отличается по уровням косвенного обращения от "int"
+  L 1.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Языки высокого уровня\L 1\x64\Debug\L 1.exe
