@@ -1,0 +1,10 @@
+﻿  main.c
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(38): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(38): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(51): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(58): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(69): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(91): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(92): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(117): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
+  Laboratornaya 10.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 10\x64\Debug\Laboratornaya 10.exe
