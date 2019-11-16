@@ -7,6 +7,7 @@
 
 int i = 0; // счётчик
 int value = 0; // объём массива
+char c; // очередной символ
 
 #define MASSIVE 2
 
@@ -79,7 +80,45 @@ int main(void)
 	free(MAS);
 #endif
 
+	// program start
 
+	//char *filestr_ptr; // указатель на filestr
+	FILE *frd;
+	printf("\nPlease enter address of file: ");
+	char *filestr = (char*)malloc(sizeof(char));
+	{ // ввод строки в динамический массив
+		i = 0;
+		while ((c = getchar()) != '\n')
+		{
+			*(filestr + i) = c;
+			filestr = (char*)realloc(filestr, (2 + (i++)) * sizeof(char));
+		}
+		*(filestr + i) = '\0';
+		puts(filestr);
+		printf("%s\n", filestr);
+	}
+	if (*filestr == '"') // удаление коввычек
+	{
+		i = 0;
+		while (*(filestr + i) != '\0')
+		{
+			(*(filestr + i + 1) == '"') ? (*(filestr + i) = '\0') : (*(filestr + i) = *(filestr + i + 1));
+			++i;
+		}
+		//filestr = (char*)realloc(filestr, i * sizeof(char));
+	}
+	puts(filestr);
+
+	frd = fopen((filestr), "rt"); // открываем исходный файл
+	if (frd == NULL) // проверка на открытие файлов
+	{
+		printf("FILE HAS NOT BEEN OPENED");
+		free(filestr);
+		exit(1);
+	}
+	
+	fclose(frd);
+	free(filestr);
 	return 0;
 }
 
@@ -120,3 +159,5 @@ void shift(int *ptr, int sme) // функция смещения стека, создание
 	}
 	return;
 }
+
+//int i;
