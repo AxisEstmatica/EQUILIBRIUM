@@ -1,0 +1,74 @@
+Group num 7454
+Student: Zamis
+         Acropol
+         Nahid
+Mark | Discipline
+ 4 Math
+ 5 Physics
+ 2 Philosophy
+
+Group num 4563
+Student: Varud
+         Liksei
+         Mahindovich
+Mark | Discipline
+ 5 Philosophy
+ 5 English
+ 3 Math
+ 5 History
+
+Group num 8476
+Student: Muhiks
+         Vladimir
+         Gaslinch
+Mark | Discipline
+ 5 Math
+ 4 German
+
+Group num 6537
+Student: Cibain
+         Lurkus
+         Dachen
+Mark | Discipline
+ 1 Mineralogy
+ 1 Babel
+
+Group num 4737
+Student: Filiks
+         Min
+         Zak
+Mark | Discipline
+ 1 Ufo
+ 1 Netro
+ 1 Math
+ 1 Physics
+ 1 History
+
+Group num 4937
+Student: Lupt
+         Gasr
+         Biats
+Mark | Discipline
+ 2 Math
+ 3 Physics
+ 5 Literature
+
+Group num 4378
+Student: Jok
+         Lu
+         Mic
+Mark | Discipline
+ 1 Literature
+ 1 Math
+ 1 Physics
+ 1 Programming
+
+Group num 2543
+Student: Kust
+         Keil
+         Mahs
+Mark | Discipline
+ 1 Math
+ 1 History
+ 1 Physics
+
