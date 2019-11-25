@@ -18,18 +18,19 @@ int i; // counter
 char c; // действующий символ
 
 void include(char *filestr); // функция добавления записей
-void write(char *filestr, struct student x); // функция записи структуры в 
+void write(char *filestr, struct student x); // функция записи структуры в
+void read(char *filestr, struct student *DATA); // функция чтения информации в массив структур
 //void delete(); // функция удаления записей
 //void output_abc(); // функция вывода записей
 //void search(); // функция поиска записи
-//void edit(); // функция редактирования записи
+void change(char *filestr); // функция редактирования записи
 
 struct student
 {
 	int  group;		// номер группы
-	char name1[15]; // Фамилия
-	char name2[15]; // Имя
-	char name3[15]; // Отчество
+	char name1[20]; // Фамилия
+	char name2[20]; // Имя
+	char name3[20]; // Отчество
 	char disp[150]; // Дисциплины
 	int  mark[10];  // Оценка
 };
@@ -84,10 +85,11 @@ loop:
 		printf("Entered string: \"%s\" corrupted\n", filestr);
 	switch (command)
 	{
-	case add: printf("Work in progress\n");
+	case add: //printf("Work in progress\n");
 		include(filestr);
 		break;
 	case edit: printf("Work in progress\n");
+		change(filestr);
 		break;
 	case delete: printf("Work in progress\n");
 		break;
@@ -117,17 +119,17 @@ void include(char *filestr)
 	int ctr; // counter
 	int end;
 	struct student x;
-	printf("Enter student's group : ");
+	printf("Enter student's group: ");
 	scanf("%d", &x.group);
 	gets(filestr); // особенность компилятора
-	printf("Enter student's surname : ");
+	printf("Enter student's surname: ");
 	//scanf("%s", x.name1);
 	//gets_s(x.name1);
 	//gets(x.name1);
 	gets(x.name1);
-	printf("Enter student's name : ");
+	printf("Enter student's name: ");
 	gets(x.name2);
-	printf("Enter student's middle name : ");
+	printf("Enter student's middle name: ");
 	gets(x.name3);
 	//
 	printf("Enter number of disciplines: ");
@@ -135,7 +137,7 @@ void include(char *filestr)
 	gets(filestr); // особенность компилятора
 	for (ctr = 0; ctr < end; )
 	{
-		printf("Enter discipline %d : ", ctr + 1);
+		printf("Enter discipline %d: ", ctr + 1);
 		{ // ввод строки в динамический массив
 			//c = getchar(); // особенность компилятора
 			while ((c = getchar()) != '\n')
@@ -187,4 +189,115 @@ void write(char *filestr, struct student x)
 	//c = getchar(); // особенность компилятора
 	fclose(fwr);
 	//return;
+}
+
+void change(char *filestr)
+{
+	int cnt;
+	filestr = (char*)realloc(filestr, 151 * sizeof(char));
+	auto struct student* DATA = (struct student*)malloc(sizeof(struct student));
+	read(filestr, DATA);
+	int X = 1;
+	printf("%d\n", DATA[X].group);
+	puts(DATA[X].name1);
+	puts(DATA[X].name2);
+	puts(DATA[X].name3);
+	for (cnt = 0; cnt < 3; cnt++)
+		printf("%d\n", DATA[X].mark[cnt]);
+	puts(DATA[X].disp);
+	//printf("%d", _msize(filestr) / sizeof(filestr[0]));
+	//printf("%d ", sizeof(struct student));
+	//printf("%d", _msize(DATA) / sizeof(struct student));
+	//
+	//free(DATA);
+	return;
+}
+
+void read(char *filestr, struct student *DATA)
+{
+	int X = 0; // dimension
+	int cnt;
+	FILE *frd = fopen("base.txt", "rt");
+		{ // group
+			i = 0;
+			while ((c = fgetc(frd)) != '\n')
+			{
+				laplas:
+				*(filestr + i) = c;
+				++i;
+			}
+			--i;
+			DATA[X].group = 0;
+			for (cnt = 1; *(filestr + i) != ' '; i--, cnt *= 10)
+				DATA[X].group += cnt * (*(filestr + i) - '0');
+		}
+		for (; (c = fgetc(frd)) != ':'; ) {}
+		c = fgetc(frd);
+		i = 0;
+		while ((c = fgetc(frd)) != '\n') // name1
+		{
+			*(filestr + i) = c;
+			++i;
+		}
+		*(filestr + i) = '\0';
+		strcpy(DATA[X].name1, filestr);
+		for (i=0; i<9; c = fgetc(frd), ++i) {}
+		i = 0;
+		while ((c = fgetc(frd)) != '\n') // name2
+		{
+			*(filestr + i) = c;
+			++i;
+		}
+		*(filestr + i) = '\0';
+		strcpy(DATA[X].name2, filestr);
+		for (i = 0; i < 9; c = fgetc(frd), ++i) {}
+		i = 0;
+		while ((c = fgetc(frd)) != '\n') // name3
+		{
+			*(filestr + i) = c;
+			++i;
+		}
+		*(filestr + i) = '\0';
+		strcpy(DATA[X].name3, filestr);
+		i = 0; // mark and discipline
+		cnt = i;
+		c = fgetc(frd);
+		for (; (c = fgetc(frd)) != '\n'; ) {}
+		c = fgetc(frd);
+		while (c != '\n')
+		{
+			c = fgetc(frd);
+			DATA[X].mark[cnt] = c - '0';
+			c = fgetc(frd);
+			while ((c = fgetc(frd)) != '\n') // 
+			{
+				*(filestr + i) = c;
+				++i;
+			}
+			if ((c = fgetc(frd)) == '\n')
+			{
+				*(filestr + i) = '\0'; // отправная точка
+				break;
+			}
+			*(filestr + i++) = '|';
+			++cnt;
+		}
+		strcpy(DATA[X].disp, filestr);
+		printf("%d\n", DATA[X].group);
+		puts(DATA[X].name1);
+		puts(DATA[X].name2);
+		puts(DATA[X].name3);
+		for (cnt = 0; cnt < 3; cnt++)
+		printf("%d\n", DATA[X].mark[cnt]);
+		puts(DATA[X].disp);
+		if ((c = fgetc(frd)) == 'G')
+		{
+			++X;
+			DATA = (struct student*)realloc(DATA, (X + 1) * sizeof(struct student));
+			i = 0;
+			goto laplas;
+		}
+		//printf("%d", _msize(DATA) / sizeof(struct student));
+		//printf("jkahsfh;ask");
+	fclose(frd);
 }
