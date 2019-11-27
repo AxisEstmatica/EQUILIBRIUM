@@ -1,4 +1,4 @@
 ﻿  main.c
-c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(124): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
-c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(183): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(157): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(219): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
   nekogda_zabytoe.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\nekogda_zabytoe\x64\Debug\nekogda_zabytoe.exe

@@ -38,19 +38,19 @@ Student: Filiks
          Min
          Zak
 Mark | Discipline
- 1 Ufo
- 1 Netro
- 1 Math
- 1 Physics
- 1 History
+ 5 Ufo
+ 5 Netro
+ 5 Math
+ 5 Physics
+ 5 History
 
 Group num 4937
 Student: Lupt
          Gasr
          Biats
 Mark | Discipline
- 2 Math
- 3 Physics
+ 4 Math
+ 4 Physics
  5 Literature
 
 Group num 4378
@@ -71,4 +71,51 @@ Mark | Discipline
  1 Math
  1 History
  1 Physics
+ 1 cs
+ 1 Programming
+
+Group num 3678
+Student: Cikrus
+         Mavr
+         Nactant
+Mark | Discipline
+ 1 Math
+ 1 Sociology
+ 1 Copyrite
+ 1 Programming
+ 1 History
+ 1 Literature
+ 1 Physics
+
+Group num 2676
+Student: Keil
+         Mert
+         Lak
+Mark | Discipline
+ 1 Math
+ 1 Physics
+
+Group num 9393
+Student: Jensen
+         Adam
+         Deus_ex
+Mark | Discipline
+ 5 Save Mankind
+
+Group num 4334
+Student: Add
+         Bdd
+         Cdd
+Mark | Discipline
+ 4 Math
+ 4 Physics
+ 4 Programming
+
+Group num 3445
+Student: GG
+         FF
+         DD
+Mark | Discipline
+ 4 DD
+ 4 FF
 
