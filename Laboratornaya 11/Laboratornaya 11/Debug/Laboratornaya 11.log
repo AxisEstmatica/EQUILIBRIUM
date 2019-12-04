@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(19): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(31): warning C4098: main: функция типа "void", возвращающая значение
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(17): warning C4101: frd: неиспользованная локальная переменная
+  Laboratornaya 11.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 11\Debug\Laboratornaya 11.exe

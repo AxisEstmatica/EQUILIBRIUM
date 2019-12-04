@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(47): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(105): warning C4098: main: функция типа "void", возвращающая значение
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 11\laboratornaya 11\main.c(125): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Laboratornaya 11.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 11\x64\Debug\Laboratornaya 11.exe
