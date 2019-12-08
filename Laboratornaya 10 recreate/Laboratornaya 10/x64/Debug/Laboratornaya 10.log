@@ -1,0 +1,13 @@
+﻿  main.c
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(63): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(78): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(300): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(358): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(324): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(418): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(452): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(489): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(609): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(643): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10 recreate\laboratornaya 10\main.c(624): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Laboratornaya 10.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 10 recreate\x64\Debug\Laboratornaya 10.exe
