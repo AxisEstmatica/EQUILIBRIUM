@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(106): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(116): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\anistrix\documents\гуап 1842\3 семестр\основы программирования\laboratornaya 10\laboratornaya 10\main.c(117): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+  Laboratornaya 10.vcxproj -> C:\Users\Anistrix\Documents\ГУАП 1842\3 семестр\Основы программирования\Laboratornaya 10\x64\Debug\Laboratornaya 10.exe
