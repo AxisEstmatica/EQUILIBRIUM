@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // РѕС‚РєР»СЋС‡РµРЅРёРµ РѕС€РёР±РєРё c4996
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
@@ -8,9 +8,9 @@
 #define NO 0
 #define N 3
 
-int i = 0; // счётчик
-int value = 0; // объём массива
-char c; // очередной символ
+int i = 0; // СЃС‡С‘С‚С‡РёРє
+int value = 0; // РѕР±СЉС‘Рј РјР°СЃСЃРёРІР°
+char c; // РѕС‡РµСЂРµРґРЅРѕР№ СЃРёРјРІРѕР»
 int type;
 int ITR;
 int prev_X;
@@ -45,7 +45,7 @@ void one_space(char *filestr);
 void mod(char ***title);
 void fname(char *filestr, char **name);
 
-void str_shift(char *filestr) // сдвиг влево на 1 символ строки
+void str_shift(char *filestr) // СЃРґРІРёРі РІР»РµРІРѕ РЅР° 1 СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё
 {
 	auto int i;
 	auto int value;
@@ -58,7 +58,7 @@ void str_shift(char *filestr) // сдвиг влево на 1 символ строки
 
 void open_file(char *filestr)
 {
-	{ // ввод строки в динамический массив
+	{ // РІРІРѕРґ СЃС‚СЂРѕРєРё РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 		i = 0;
 		while ((c = getchar()) != '\n')
 		{
@@ -67,7 +67,7 @@ void open_file(char *filestr)
 		}
 		*(filestr + i) = '\0';
 	}
-	if (*filestr == '"') // удаление ковычек
+	if (*filestr == '"') // СѓРґР°Р»РµРЅРёРµ РєРѕРІС‹С‡РµРє
 	{
 		i = 0;
 		while (*(filestr + i) != '\0')
@@ -86,14 +86,14 @@ int main(void)
 	int flag_qte = 0;
 	int prev_J = 0;
 	char prev_c; // for defence
-	int flag_zap; // flag of запятой
-	WORD foregroundColor0; // цвет 
-	WORD textAttribute;	   // атрибут текста - цвет
+	int flag_zap; // flag of Р·Р°РїСЏС‚РѕР№
+	WORD foregroundColor0; // С†РІРµС‚ 
+	WORD textAttribute;	   // Р°С‚СЂРёР±СѓС‚ С‚РµРєСЃС‚Р° - С†РІРµС‚
 	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
 	foregroundColor0 = FOREGROUND_INTENSITY | FOREGROUND_BLUE | FOREGROUND_GREEN /*| FOREGROUND_RED*/;
 	textAttribute = foregroundColor0;// | backgroundColor;
 	SetConsoleTextAttribute(hStdout, textAttribute);
-	// создаём скелет трёхмерного массива
+	// СЃРѕР·РґР°С‘Рј СЃРєРµР»РµС‚ С‚СЂС‘С…РјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
 	X = 0;
 	prev_X = X;
 	char ***title;
@@ -101,21 +101,21 @@ int main(void)
 	title[0] = (char**)malloc(N * sizeof(char*)); // page right; 4 coloumns
 	for (Y = 0; Y < N; ++Y)
 		title[0][Y] = (char*)malloc(sizeof(char)); // page up
-	title[X][1][0] = '\0'; // устанавливаем конец слова в начало
+	title[X][1][0] = '\0'; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРЅРµС† СЃР»РѕРІР° РІ РЅР°С‡Р°Р»Рѕ
 	//
 	FILE *frd;
 	printf("Please enter address of file: ");
 	char *filestr = (char*)malloc(sizeof(char));
-	open_file(filestr); // вносим путь файла в filestr
+	open_file(filestr); // РІРЅРѕСЃРёРј РїСѓС‚СЊ С„Р°Р№Р»Р° РІ filestr
 	// start of 2 massive
 	J = 0;
 	char **name; // page of names
 	name = (char**)malloc(2*sizeof(char*)); // page down
 	name[0] = (char*)malloc(_msize(filestr) * sizeof(char)); // page right
 	name[1] = (char*)malloc(_msize(filestr) * sizeof(char));
-	strcpy(name[J], filestr); // запомнили путь файла 
-	// сохраняем путь файла в массив имён файлов (не забыть про увеличение количества строк)
-	// цикл поиска файлов
+	strcpy(name[J], filestr); // Р·Р°РїРѕРјРЅРёР»Рё РїСѓС‚СЊ С„Р°Р№Р»Р° 
+	// СЃРѕС…СЂР°РЅСЏРµРј РїСѓС‚СЊ С„Р°Р№Р»Р° РІ РјР°СЃСЃРёРІ РёРјС‘РЅ С„Р°Р№Р»РѕРІ (РЅРµ Р·Р°Р±С‹С‚СЊ РїСЂРѕ СѓРІРµР»РёС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃС‚СЂРѕРє)
+	// С†РёРєР» РїРѕРёСЃРєР° С„Р°Р№Р»РѕРІ
 	do
 	{
 		frd = fopen((filestr), "rt");
@@ -124,12 +124,12 @@ int main(void)
 			printf("FILE CORRUPT\n");
 			break;
 		}
-		// обрабатывать до ';', EOF
-		{ // поиск сходства со значениями
+		// РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ РґРѕ ';', EOF
+		{ // РїРѕРёСЃРє СЃС…РѕРґСЃС‚РІР° СЃРѕ Р·РЅР°С‡РµРЅРёСЏРјРё
 			while (!feof(frd))
 			{
 				flag_qte = 0;
-				{ // ввод строки в динамический массив
+				{ // РІРІРѕРґ СЃС‚СЂРѕРєРё РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 					i = 0;
 					while ((c = getc(frd)) != ';' && c != EOF)
 					{
@@ -149,16 +149,16 @@ int main(void)
 								break;
 						}
 					else
-						type = last; // если символ перед типом существовал то это не тип
+						type = last; // РµСЃР»Рё СЃРёРјРІРѕР» РїРµСЂРµРґ С‚РёРїРѕРј СЃСѓС‰РµСЃС‚РІРѕРІР°Р» С‚Рѕ СЌС‚Рѕ РЅРµ С‚РёРї
 					// recreation
 					if (prev_X != X)
-					{ // если изменился X то расширяем трёхмеру
+					{ // РµСЃР»Рё РёР·РјРµРЅРёР»СЃСЏ X С‚Рѕ СЂР°СЃС€РёСЂСЏРµРј С‚СЂС‘С…РјРµСЂСѓ
 						prev_X = X;
 						title = (char***)realloc(title, (1 + X) * sizeof(char**)); // page down
 						title[X] = (char**)malloc(N * sizeof(char*)); // page right; 4 coloumns
 						for (Y = 0; Y < N; Y++)
 							title[X][Y] = (char*)malloc(sizeof(char)); // page up
-						title[X][1][0] = '\0'; // устанавливаем конец слова в начало
+						title[X][1][0] = '\0'; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРЅРµС† СЃР»РѕРІР° РІ РЅР°С‡Р°Р»Рѕ
 					}
 					if (flag_bkt == 0)
 					{
@@ -184,7 +184,7 @@ int main(void)
 									title[i] = (char**)malloc(N * sizeof(char*)); // page right; 4 coloumns
 									for (Y = 0; Y < N; Y++)
 										title[i][Y] = (char*)malloc(sizeof(char)); // page up
-									title[i][1][0] = '\0'; // устанавливаем конец слова в начало
+									title[i][1][0] = '\0'; // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРЅРµС† СЃР»РѕРІР° РІ РЅР°С‡Р°Р»Рѕ
 								}
 							}
 							write(filestr, title, name);
@@ -404,7 +404,7 @@ void output_res(char *filestr, char ***title, char **name)
 void rewrite(char *filestr) // del '\n'
 {
 	auto int i = 0;
-	auto int flag_qte = NO; // защита от ковычек
+	auto int flag_qte = NO; // Р·Р°С‰РёС‚Р° РѕС‚ РєРѕРІС‹С‡РµРє
 	while (*(filestr + i) != '\0') // del '//' (comments)
 	{
 		if ((*(filestr + i) == '/') && (*(filestr + i + 1) == '/'))
@@ -473,7 +473,7 @@ void one_space(char *filestr)
 	}
 	flag = NO;
 	for (i = 0, j = 0; i < value; ++i, ++j)
-	{ // избавление от лишних пробелов
+	{ // РёР·Р±Р°РІР»РµРЅРёРµ РѕС‚ Р»РёС€РЅРёС… РїСЂРѕР±РµР»РѕРІ
 		if (*(filestr + i) != ' ')
 			flag = NO;
 		if (flag == NO)
