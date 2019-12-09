@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // РѕС‚РєР»СЋС‡РµРЅРёРµ РѕС€РёР±РєРё c4996
 #include <stdio.h>
 #include <windows.h>
 #include <locale.h>
@@ -9,22 +9,22 @@ void processing(char num[STR / 8]);
 void main(void)
 {
 	char *locale = setlocale(LC_ALL, "");
-	WORD foregroundColor0; // цвет слов
-	WORD textAttribute;	   // атрибут текста - цвет символа и фона
+	WORD foregroundColor0; // С†РІРµС‚ СЃР»РѕРІ
+	WORD textAttribute;	   // Р°С‚СЂРёР±СѓС‚ С‚РµРєСЃС‚Р° - С†РІРµС‚ СЃРёРјРІРѕР»Р° Рё С„РѕРЅР°
 	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
 	foregroundColor0 = FOREGROUND_INTENSITY | FOREGROUND_BLUE | FOREGROUND_GREEN;
 	textAttribute = foregroundColor0;
 	SetConsoleTextAttribute(hStdout, textAttribute);
-	int i; // счётчик
-	int j; // счётчик
-	char str[STR]; // массив строки
-	char num[STR / 8]; // массив целочисленной константы
+	int i; // СЃС‡С‘С‚С‡РёРє
+	int j; // СЃС‡С‘С‚С‡РёРє
+	char str[STR]; // РјР°СЃСЃРёРІ СЃС‚СЂРѕРєРё
+	char num[STR / 8]; // РјР°СЃСЃРёРІ С†РµР»РѕС‡РёСЃР»РµРЅРЅРѕР№ РєРѕРЅСЃС‚Р°РЅС‚С‹
 	char *str_ptr = str;
 	FILE *frd;
 	printf("Please enter address of file: ");
-	gets(str); // получаем путь к файлу
+	gets(str); // РїРѕР»СѓС‡Р°РµРј РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
 	if (*str_ptr == '"')
-	{ // удаление ковычек
+	{ // СѓРґР°Р»РµРЅРёРµ РєРѕРІС‹С‡РµРє
 		i = 0;
 		while (*(str_ptr + i) != '\0')
 		{
@@ -32,7 +32,7 @@ void main(void)
 			++i;
 		}
 	}
-	printf("Path of file: %s\n", str); // отладка
+	printf("Path of file: %s\n", str); // РѕС‚Р»Р°РґРєР°
 	frd = fopen((str), "rt");
 	if (frd == NULL)   
 		return -2; // chk open file
@@ -45,7 +45,7 @@ void main(void)
 		while (*(str_ptr + i) != '\0')
 		{
 			if (*(str_ptr + i) == '/' && *(str_ptr + i + 1) == '/')
-			{ // защита от //
+			{ // Р·Р°С‰РёС‚Р° РѕС‚ //
 				while (*(str_ptr + i) != '\0')
 				{
 					printf("%c", *(str_ptr + i));
@@ -77,9 +77,9 @@ void main(void)
 
 void processing(char num[STR / 8])
 {
-	WORD foregroundColor0; // цвет обычный
-	WORD foregroundColor1; // цвет необычный 
-	WORD textAttribute;	   // атрибут текста - цвет символа и фона  
+	WORD foregroundColor0; // С†РІРµС‚ РѕР±С‹С‡РЅС‹Р№
+	WORD foregroundColor1; // С†РІРµС‚ РЅРµРѕР±С‹С‡РЅС‹Р№ 
+	WORD textAttribute;	   // Р°С‚СЂРёР±СѓС‚ С‚РµРєСЃС‚Р° - С†РІРµС‚ СЃРёРјРІРѕР»Р° Рё С„РѕРЅР°  
 	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE); 
 	foregroundColor0 = FOREGROUND_INTENSITY | FOREGROUND_BLUE | FOREGROUND_GREEN;
 	foregroundColor1 = FOREGROUND_INTENSITY | FOREGROUND_RED;
