@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <windows.h>
-#define N 5
+#define N 3
 using namespace std;
 class Abiturient
 {
@@ -12,8 +12,6 @@ class Abiturient
 	string name3;
 	string Adress;
 	int marks[N];
-	//float average_mark;
-	//int sum;
 
 public:
 	int sum;
@@ -35,9 +33,6 @@ public:
 			cin >> *(ptr + i);
 			sum += *(ptr + i);
 		}
-		//cout << sum;///
-		//average_mark = (float)sum / N;
-		//cout << average_mark;///
 	}
 	void get()
 	{
@@ -54,6 +49,14 @@ public:
 	{
 		int *ptr = marks;
 		return *(ptr+i);
+	}
+	void ret_sum()
+	{
+		sum = 0;
+		for (int i = 0, *ptr = marks; i < N; ++i)
+		{
+			sum += *(ptr + i);
+		}
 	}
 	int get_sum()
 	{
@@ -100,7 +103,6 @@ int main(void)
 	}
 	int menu_2 = 0;
 	int Ne;
-	int max = -1; // for [1]
 	int MX; // as max
 	int pos;
 	while (menu_2 != 5)
@@ -146,20 +148,23 @@ int main(void)
 			{
 				for (j = 0, MX = 0, pos = 0; j < cnt; ++j)
 				{
-					if (UST[0][j].sum > MX && UST[0][j].sum != max)
+					if (UST[0][j].sum > MX)
 					{
 						MX = UST[0][j].sum;
 						pos = j;
 					}
 				}
 				UST[1][i] = UST[0][pos];
-				max = UST[1][i].sum;
+				UST[0][pos].sum = 0;
 			}
 			for (int i = 0; i < Ne; ++i)
 			{
 				UST[1][i].get();
 			}
-
+			for (int i = 0; i < cnt; ++i)
+			{
+				UST[0][i].ret_sum();
+			}
 			break;
 		case 4:
 			cout << "—писок абитуриентов, имеющих полупроходной балл\n    ¬ведите проходной балл: " << endl;
