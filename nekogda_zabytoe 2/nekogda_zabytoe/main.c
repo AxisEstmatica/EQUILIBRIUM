@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // РѕС‚РєР»СЋС‡РµРЅРёРµ РѕС€РёР±РєРё c4996
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
@@ -8,36 +8,36 @@
 #define NO 0
 #define N 9
 #define STR 200
-#define OTS 9 // отступ
+#define OTS 9 // РѕС‚СЃС‚СѓРї
 
-void include(char *filestr); // функция добавления записей
-void write(char *filestr, struct student x); // функция записи структуры в
-void rewrite(char *filestr, struct student *DATA); // функция перезаписи БД, в принципе только здесь её потерять и можно...
-void read(char *filestr, struct student *DATA); // функция чтения информации в массив структур
-int counter(char *filestr); // подсчитывает размер базы данных (структур)
-void uninclude(char *filestr); // функция удаления записей
-void abc(char *filestr); // функция вывода студентов в алфавитном порядке
-void out_grant(char *filestr); // функция назначения стипендий студентам
-void out_reex(char *filestr); // функция вывода студентов на пересдачу
-void out_expel(char *filestr); // функция вывода студентов на отчисление
-void list(char *filestr); // функция вывода списка студентов
-void change(char *filestr); // функция редактирования записи
-void menu(); // функция описания возможностей программы
-void output(char *filestr, int EDGE, struct student *DATA); // вывод данных на экран
-void out_avg(char *filestr); // функция вывода согласно среднему баллу
+void include(char *filestr); // С„СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ Р·Р°РїРёСЃРµР№
+void write(char *filestr, struct student x); // С„СѓРЅРєС†РёСЏ Р·Р°РїРёСЃРё СЃС‚СЂСѓРєС‚СѓСЂС‹ РІ
+void rewrite(char *filestr, struct student *DATA); // С„СѓРЅРєС†РёСЏ РїРµСЂРµР·Р°РїРёСЃРё Р‘Р”, РІ РїСЂРёРЅС†РёРїРµ С‚РѕР»СЊРєРѕ Р·РґРµСЃСЊ РµС‘ РїРѕС‚РµСЂСЏС‚СЊ Рё РјРѕР¶РЅРѕ...
+void read(char *filestr, struct student *DATA); // С„СѓРЅРєС†РёСЏ С‡С‚РµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё РІ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+int counter(char *filestr); // РїРѕРґСЃС‡РёС‚С‹РІР°РµС‚ СЂР°Р·РјРµСЂ Р±Р°Р·С‹ РґР°РЅРЅС‹С… (СЃС‚СЂСѓРєС‚СѓСЂ)
+void uninclude(char *filestr); // С„СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ Р·Р°РїРёСЃРµР№
+void abc(char *filestr); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃС‚СѓРґРµРЅС‚РѕРІ РІ Р°Р»С„Р°РІРёС‚РЅРѕРј РїРѕСЂСЏРґРєРµ
+void out_grant(char *filestr); // С„СѓРЅРєС†РёСЏ РЅР°Р·РЅР°С‡РµРЅРёСЏ СЃС‚РёРїРµРЅРґРёР№ СЃС‚СѓРґРµРЅС‚Р°Рј
+void out_reex(char *filestr); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃС‚СѓРґРµРЅС‚РѕРІ РЅР° РїРµСЂРµСЃРґР°С‡Сѓ
+void out_expel(char *filestr); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃС‚СѓРґРµРЅС‚РѕРІ РЅР° РѕС‚С‡РёСЃР»РµРЅРёРµ
+void list(char *filestr); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃРїРёСЃРєР° СЃС‚СѓРґРµРЅС‚РѕРІ
+void change(char *filestr); // С„СѓРЅРєС†РёСЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
+void menu(); // С„СѓРЅРєС†РёСЏ РѕРїРёСЃР°РЅРёСЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РїСЂРѕРіСЂР°РјРјС‹
+void output(char *filestr, int EDGE, struct student *DATA); // РІС‹РІРѕРґ РґР°РЅРЅС‹С… РЅР° СЌРєСЂР°РЅ
+void out_avg(char *filestr); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃРѕРіР»Р°СЃРЅРѕ СЃСЂРµРґРЅРµРјСѓ Р±Р°Р»Р»Сѓ
 
 struct student
 {
-	int  group;		// номер группы
-	char name1[40]; // Фамилия
-	char name2[40]; // Имя
-	char name3[40]; // Отчество
-	char disp[150]; // Дисциплины
-	int  mark[10];  // Оценка
-	float avg; // средний балл
+	int  group;		// РЅРѕРјРµСЂ РіСЂСѓРїРїС‹
+	char name1[40]; // Р¤Р°РјРёР»РёСЏ
+	char name2[40]; // РРјСЏ
+	char name3[40]; // РћС‚С‡РµСЃС‚РІРѕ
+	char disp[150]; // Р”РёСЃС†РёРїР»РёРЅС‹
+	int  mark[10];  // РћС†РµРЅРєР°
+	float avg; // СЃСЂРµРґРЅРёР№ Р±Р°Р»Р»
 };
 
-int cmp_by_name(const void * a, const void * b) // функция сортироки по фамилии имени отчеству
+int cmp_by_name(const void * a, const void * b) // С„СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРєРё РїРѕ С„Р°РјРёР»РёРё РёРјРµРЅРё РѕС‚С‡РµСЃС‚РІСѓ
 {
 	int cmp;
 	cmp = strcmp(((struct student*)a)->name1, ((struct student*)b)->name1);
@@ -47,7 +47,7 @@ int cmp_by_name(const void * a, const void * b) // функция сортироки по фамилии 
 	return strcmp(((struct student*)a)->name3, ((struct student*)b)->name3);
 }
 
-int cmp_by_avg(const void * a, const void * b) // функция сортировки вещественных чисел
+int cmp_by_avg(const void * a, const void * b) // С„СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РІРµС‰РµСЃС‚РІРµРЅРЅС‹С… С‡РёСЃРµР»
 {
 	if (((struct student*)b)->avg < ((struct student*)a)->avg)
 		return -1;
@@ -71,16 +71,16 @@ enum my_command
 int main(void) // b.f.
 {
 	int i; 
-	int c; // действующий символ
+	int c; // РґРµР№СЃС‚РІСѓСЋС‰РёР№ СЃРёРјРІРѕР»
 	char m_comToChar[N][14] = { "add","edit","delete","output name","output mark","output grant","output repeat","output expel","end" };
 	int command;
 	char *filestr = (char*)malloc(151*sizeof(char));
 	while (1)
 	{
-		system("cls"); // очищение консоли
+		system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 		menu();
 		printf(" | Input: ");
-		{ // ввод строки в динамический массив
+		{ // РІРІРѕРґ СЃС‚СЂРѕРєРё РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 			i = 0;
 			while ((c = getchar()) != '\n')
 			{
@@ -102,40 +102,40 @@ int main(void) // b.f.
 		switch (command)
 		{
 		case add:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			printf(" | Add new student to database\n");
 			include(filestr);
 			break;
 		case edit:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			list(filestr);
 			printf(" | Edit student's marks\n");
 			change(filestr);
 			break;
 		case delete:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			list(filestr);
 			printf(" | Delete student from database\n");
 			uninclude(filestr);
 			break;
 		case output_name:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			abc(filestr);
 			break;
 		case output_mark:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			out_avg(filestr);
 			break;
 		case output_grant: 
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			out_grant(filestr);
 			break;
 		case output_repeat: 
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			out_reex(filestr);
 			break;
 		case otput_expel:
-			system("cls"); // очищение консоли
+			system("cls"); // РѕС‡РёС‰РµРЅРёРµ РєРѕРЅСЃРѕР»Рё
 			out_expel(filestr);
 			break;
 		case end: 
@@ -157,9 +157,9 @@ void list(char *filestr)
 	printf(" | List of students:\n");
 	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
 	i = counter(filestr); // HAS BEEN CHANGED IF ERROR COPY FROM PREVIOUS VERSION
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // несортированный массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
-	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РЅРµСЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
+	qsort(DATA, i, sizeof(struct student), cmp_by_name); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (int j = 0; j < i; ++j)
 	{
 		printf(" |  %3d. %-12s %-12s %-12s : group num = %d\n", j + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
@@ -174,11 +174,11 @@ void out_expel(char *filestr)
 	int k;
 	int flag_expel;
 	i = counter(filestr);
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | List of students for expel:\n");
 	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
-	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
+	qsort(DATA, i, sizeof(struct student), cmp_by_name); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (int j = 0, num = 0, sum = 0; j < i; ++j, sum = 0)
 	{
 		for (k = 0, flag_expel = NO; DATA[j].mark[k] > 0 && k < 10; ++k)
@@ -210,11 +210,11 @@ void out_reex(char *filestr)
 	int z;
 	int flag_reex;
 	i = counter(filestr);
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | Students that directed to the re-examination:\n");
 	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
-	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
+	qsort(DATA, i, sizeof(struct student), cmp_by_name); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (int j = 0, num = 0; j < i; ++j)
 	{
 		z = 0;
@@ -268,11 +268,11 @@ void out_grant(char *filestr)
 	int k;
 	int flag_grant;
 	i = counter(filestr);
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | Granted students:\n");
 	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
-	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
+	qsort(DATA, i, sizeof(struct student), cmp_by_name); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (int j = 0, num = 0; j < i; ++j)
 	{
 		for (k = 0, flag_grant = YES; DATA[j].mark[k] > 0 && k < 10; ++k)
@@ -298,8 +298,8 @@ void out_avg(char *filestr)
 	auto int i;
 	int k;
 	i = counter(filestr);
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // несортированный массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РЅРµСЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | Educational rating:\n");
 	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
 	for (int j = 0; j < i; ++j)
@@ -313,14 +313,14 @@ void out_avg(char *filestr)
 		}
 		DATA[j].avg = (float)DATA[j].avg / k;
 	}
-	qsort(DATA, i, sizeof(struct student), cmp_by_avg); // сортировка
+	qsort(DATA, i, sizeof(struct student), cmp_by_avg); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (k = 0; k < i; ++k)
 		printf(" | %3d. %-12s %-12s %-12s : group num = %-6d : average mark = %.1f\n", k + 1, DATA[k].name1, DATA[k].name2, DATA[k].name3, DATA[k].group, DATA[k].avg);
 	free(DATA);
 	return;
 }
 
-void output(char *filestr, int EDGE, struct student *DATA) // вывод данных на экран
+void output(char *filestr, int EDGE, struct student *DATA) // РІС‹РІРѕРґ РґР°РЅРЅС‹С… РЅР° СЌРєСЂР°РЅ
 {
 	char c; // debug
 	int cnt;
@@ -351,9 +351,9 @@ void abc(char *filestr)
 	auto int i;
 	printf(" | Output database in alphabetical order:\n");
 	i = counter(filestr); // HAS BEEN CHANGED IF ERROR COPY FROM PREVIOUS VERSION
-	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // несортированный массив структур
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
-	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
+	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // РЅРµСЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
+	qsort(DATA, i, sizeof(struct student), cmp_by_name); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	output(filestr, i, DATA);
 	free(DATA);
 	return;
@@ -374,7 +374,7 @@ void include(char *filestr)
 		gets(filestr);
 		return;
 	}
-	gets(filestr); // особенность компилятора
+	gets(filestr); // РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЊ РєРѕРјРїРёР»СЏС‚РѕСЂР°
 	printf(" | Enter student's surname: ");
 	gets(x.name1);
 	printf(" | Enter student's name: ");
@@ -389,11 +389,11 @@ void include(char *filestr)
 		gets(filestr);
 		return;
 	}
-	gets(filestr); // особенность компилятора
+	gets(filestr); // РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЊ РєРѕРјРїРёР»СЏС‚РѕСЂР°
 	for (ctr = 0; ctr < end; )
 	{
 		printf(" | Enter discipline %d: ", ctr + 1);
-		{ // ввод строки в динамический массив
+		{ // РІРІРѕРґ СЃС‚СЂРѕРєРё РІ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 			while ((c = getchar()) != '\n')
 			{
 				*(filestr + i) = c;
@@ -415,7 +415,7 @@ void include(char *filestr)
 	return;
 }
 
-void write(char *filestr, struct student x) // запись данных в конец файла
+void write(char *filestr, struct student x) // Р·Р°РїРёСЃСЊ РґР°РЅРЅС‹С… РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
 {
 	int i;
 	int cnt = 0; // counter
@@ -436,7 +436,7 @@ void write(char *filestr, struct student x) // запись данных в конец файла
 	fclose(fwr);
 }
 
-void rewrite(char *filestr, struct student *DATA) // перезапись базы данных
+void rewrite(char *filestr, struct student *DATA) // РїРµСЂРµР·Р°РїРёСЃСЊ Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 {
 	FILE *fwr;
 	fwr = fopen("base.txt", "wt");
@@ -450,11 +450,11 @@ void change(char *filestr)
 	int i;
 	int c;
 	int X; // x - dimension (axis)
-	struct student x; // требуется для хранения введённых параметров и дальнейшего сравнения с БД
+	struct student x; // С‚СЂРµР±СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІРІРµРґС‘РЅРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ Рё РґР°Р»СЊРЅРµР№С€РµРіРѕ СЃСЂР°РІРЅРµРЅРёСЏ СЃ Р‘Р”
 	int cnt; // counter of discioline
 	i = counter(filestr); // HAS BEEN CHANGED IF ERROR COPY FROM PREVIOUS VERSION
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student));
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | Enter student's surname: ");
 	gets(x.name1);
 	printf(" | Enter student's name: ");
@@ -499,7 +499,7 @@ void change(char *filestr)
 			++i;
 		++cnt;
 	}
-	c = getchar(); // особенность компилятора (steck\n)
+	c = getchar(); // РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЊ РєРѕРјРїРёР»СЏС‚РѕСЂР° (steck\n)
 	rewrite(filestr,DATA); // serost' : perezapis' v obshem
 	printf(" | Marks were edited!\n");
 	free(DATA);
@@ -592,7 +592,7 @@ void read(char *filestr, struct student *DATA)
 			}
 			if ((c = fgetc(frd)) == '\n')
 			{
-				*(filestr + i) = '\0'; // отправная точка
+				*(filestr + i) = '\0'; // РѕС‚РїСЂР°РІРЅР°СЏ С‚РѕС‡РєР°
 				break;
 			}
 			*(filestr + i++) = '|';
@@ -607,11 +607,11 @@ void uninclude(char *filestr)
 {
 	int i;
 	int X; // x - dimension (axis)
-	struct student x; // требуется для хранения введённых параметров и дальнейшего сравнения с БД
+	struct student x; // С‚СЂРµР±СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІРІРµРґС‘РЅРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ Рё РґР°Р»СЊРЅРµР№С€РµРіРѕ СЃСЂР°РІРЅРµРЅРёСЏ СЃ Р‘Р”
 	int cnt; // counter of delete element
 	i = counter(filestr);
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student));
-	read(filestr, DATA); // получаем динамический массив структур всех студентов
+	read(filestr, DATA); // РїРѕР»СѓС‡Р°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
 	printf(" | Enter student's surname: ");
 	gets(x.name1);
 	printf(" | Enter student's name: ");
@@ -652,7 +652,7 @@ void menu()
 {
 	WORD foregroundColor0;
 	WORD foregroundColor1;
-	WORD textAttribute;	   // атрибут текста - цвет символа и фона
+	WORD textAttribute;	   // Р°С‚СЂРёР±СѓС‚ С‚РµРєСЃС‚Р° - С†РІРµС‚ СЃРёРјРІРѕР»Р° Рё С„РѕРЅР°
 	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
 	foregroundColor1 = FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_RED;
 	textAttribute = foregroundColor1;
