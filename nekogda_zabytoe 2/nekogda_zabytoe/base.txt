@@ -1,0 +1,230 @@
+Group num 7454
+Student: Zamis
+         Acropol
+         Nahid
+Mark | Discipline
+ 4 Math
+ 5 Physics
+ 2 Philosophy
+
+Group num 4563
+Student: Varud
+         Liksei
+         Mahindovich
+Mark | Discipline
+ 5 Philosophy
+ 5 English
+ 3 Math
+ 5 History
+
+Group num 8476
+Student: Muhiks
+         Vladimir
+         Gaslinch
+Mark | Discipline
+ 5 Math
+ 4 German
+
+Group num 6537
+Student: Cibain
+         Lurkus
+         Dachen
+Mark | Discipline
+ 1 Mineralogy
+ 1 Babel
+
+Group num 4737
+Student: Filiks
+         Min
+         Zak
+Mark | Discipline
+ 5 Ufo
+ 5 Netro
+ 5 Math
+ 5 Physics
+ 5 History
+
+Group num 4937
+Student: Lupt
+         Gasr
+         Biats
+Mark | Discipline
+ 4 Math
+ 4 Physics
+ 5 Literature
+
+Group num 4378
+Student: Jok
+         Lu
+         Mic
+Mark | Discipline
+ 1 Literature
+ 1 Math
+ 1 Physics
+ 1 Programming
+
+Group num 2543
+Student: Kust
+         Keil
+         Mahs
+Mark | Discipline
+ 1 Math
+ 1 History
+ 1 Physics
+ 1 cs
+ 1 Programming
+
+Group num 3678
+Student: Cikrus
+         Mavr
+         Nactant
+Mark | Discipline
+ 1 Math
+ 1 Sociology
+ 1 Copyrite
+ 1 Programming
+ 1 History
+ 1 Literature
+ 1 Physics
+
+Group num 2676
+Student: Keil
+         Mert
+         Lak
+Mark | Discipline
+ 1 Math
+ 1 Physics
+
+Group num 9393
+Student: Jensen
+         Adam
+         Deus_ex
+Mark | Discipline
+ 5 Save Mankind
+
+Group num 4334
+Student: Add
+         Bdd
+         Cdd
+Mark | Discipline
+ 4 Math
+ 4 Physics
+ 4 Programming
+
+Group num 7834
+Student: Makishima
+         Syogo
+         J
+Mark | Discipline
+ 5 Math
+ 5 Literature
+
+Group num 2384
+Student: Nut
+         Nut
+         Nut
+Mark | Discipline
+ 1 first
+ 1 second
+ 1 third
+ 1 fourth
+ 1 fifth
+ 1 sixth
+ 1 seventh
+ 1 eighth
+
+Group num 2323
+Student: level1
+         level11
+         level11
+Mark | Discipline
+ 1 level
+
+Group num 2323
+Student: level1
+         level12
+         level
+Mark | Discipline
+ 2 le
+
+Group num 2323
+Student: level1
+         level11
+         level12
+Mark | Discipline
+ 1 le
+
+Group num 12
+Student: level1
+         level12
+         level11
+Mark | Discipline
+ 1 le
+
+Group num 3
+Student: aa
+         aa
+         aa
+Mark | Discipline
+ 1 a
+
+Group num 2
+Student: ab
+         aa
+         av
+Mark | Discipline
+ 1 a
+ 1 a
+
+Group num 234
+Student: Meg
+         Meg
+         Meg
+Mark | Discipline
+ 2 First
+ 2 Second
+ 4 Third
+ 2 Fourth
+ 5 Fifth
+
+Group num 3323
+Student: Gignton
+         Fistrich
+         Jokd
+Mark | Discipline
+ 1 Math
+ 1 Physics
+ 1 Philosophy
+ 1 History
+
+Group num 1745
+Student: Nilfa
+         Makros
+         Uhug
+Mark | Discipline
+ 5 Progamming
+ 4 Sociology
+ 4 Etnography
+ 5 Math
+
+Group num 2374
+Student: Syoko
+         Maki
+         Hok
+Mark | Discipline
+ 5 English
+ 5 History
+ 4 Alchemy
+ 5 Math
+
+Group num 3452
+Student: Boyken
+         Jakob
+         Shurs
+Mark | Discipline
+ 5 Math
+ 5 History
+ 5 Programming
+ 4 Physics
+ 5 Philosophy
+

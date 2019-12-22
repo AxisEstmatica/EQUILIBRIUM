@@ -1,0 +1,15 @@
+﻿  main.c
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(124): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(162): warning C4133: функция: несовместимые типы - из "char [50]" в "FILE *const "
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(162): warning C4133: функция: несовместимые типы - из "int *" в "const char *const "
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(165): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(167): warning C4133: функция: несовместимые типы - из "char [3]" в "FILE *const "
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(167): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "char"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(167): warning C4024: fprintf: различные типы для формального и фактического параметров 2
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(168): warning C4133: функция: несовместимые типы - из "char [3]" в "FILE *const "
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(168): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe\nekogda_zabytoe\main.c(168): warning C4024: fprintf: различные типы для формального и фактического параметров 2
+  Создание кода
+  All 10 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  nekogda_zabytoe.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\nekogda_zabytoe\x64\Release\nekogda_zabytoe.exe

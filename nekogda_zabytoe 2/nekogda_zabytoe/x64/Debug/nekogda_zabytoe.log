@@ -1,0 +1,7 @@
+﻿  main.c
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe 2\nekogda_zabytoe\main.c(150): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe 2\nekogda_zabytoe\main.c(336): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe 2\nekogda_zabytoe\main.c(325): warning C4101: c: неиспользованная локальная переменная
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe 2\nekogda_zabytoe\main.c(430): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
+c:\users\zerko\documents\гуап 1842\3 семестр\основы программирования\nekogda_zabytoe 2\nekogda_zabytoe\main.c(653): warning C4101: foregroundColor0: неиспользованная локальная переменная
+  nekogda_zabytoe.vcxproj -> C:\Users\zerko\Documents\ГУАП 1842\3 семестр\Основы программирования\nekogda_zabytoe 2\x64\Debug\nekogda_zabytoe.exe
