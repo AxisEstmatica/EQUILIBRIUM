@@ -29,10 +29,10 @@ void out_avg(char *filestr); // функция вывода согласно с�
 struct student
 {
 	int  group;		// номер группы
-	char name1[40]; // Фамилия
-	char name2[40]; // Имя
-	char name3[40]; // Отчество
-	char disp[150]; // Дисциплины
+	char name1[21]; // Фамилия
+	char name2[21]; // Имя
+	char name3[21]; // Отчество
+	char disp[151]; // Дисциплины
 	int  mark[10];  // Оценка
 	float avg; // средний балл
 };
@@ -74,7 +74,8 @@ int main(void) // b.f.
 	int c; // действующий символ
 	char m_comToChar[N][14] = { "add","edit","delete","output name","output mark","output grant","output repeat","output expel","end" };
 	int command;
-	char *filestr = (char*)malloc(151*sizeof(char));
+	char x[151];
+	char *filestr = x;
 	while (1)
 	{
 		system("cls"); // очищение консоли
@@ -85,7 +86,6 @@ int main(void) // b.f.
 			while ((c = getchar()) != '\n')
 			{
 				*(filestr + i) = c;
-				//filestr = (char*)realloc(filestr, (2 + (i)) * sizeof(char));
 				++i;
 			}
 			*(filestr + i) = '\0';
@@ -140,7 +140,6 @@ int main(void) // b.f.
 			break;
 		case end: 
 			printf(" | \n | Shutdown program\n");
-			free(filestr);
 			return 0;
 		default:
 			printf(" | Not aviable command\n");
@@ -155,14 +154,15 @@ void list(char *filestr)
 {
 	auto int i;
 	printf(" | List of students:\n");
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | _______________________________________________________________________________________\n");
+	printf(" | NUM   Surname              Name                 Middle name            Group\n | \n");
 	i = counter(filestr); // HAS BEEN CHANGED IF ERROR COPY FROM PREVIOUS VERSION
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // несортированный массив структур
 	read(filestr, DATA); // получаем динамический массив структур всех студентов
 	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
 	for (int j = 0; j < i; ++j)
 	{
-		printf(" |  %3d. %-12s %-12s %-12s : group num = %d\n", j + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
+		printf(" |  %3d. %-20s %-20s %-20s : group num = %d\n", j + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
 	}
 	free(DATA);
 	return;
@@ -177,7 +177,8 @@ void out_expel(char *filestr)
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
 	read(filestr, DATA); // получаем динамический массив структур всех студентов
 	printf(" | List of students for expel:\n");
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | ______________________________________________________________________________________\n");
+	printf(" | NUM  Surname              Name                 Middle name            Group\n | \n");
 	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
 	for (int j = 0, num = 0, sum = 0; j < i; ++j, sum = 0)
 	{
@@ -195,7 +196,7 @@ void out_expel(char *filestr)
 		}
 		if (flag_expel == YES || sum == k)
 		{
-			printf(" | %3d. %-12s %-12s %-12s : group num = %d\n", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
+			printf(" | %3d. %-20s %-20s %-20s : group num = %d\n", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
 			++num;
 		}
 	}
@@ -213,7 +214,8 @@ void out_reex(char *filestr)
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
 	read(filestr, DATA); // получаем динамический массив структур всех студентов
 	printf(" | Students that directed to the re-examination:\n");
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | ______________________________________________________________________________________\n");
+	printf(" | NUM  Surname              Name                 Middle name            Group\n | \n");
 	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
 	for (int j = 0, num = 0; j < i; ++j)
 	{
@@ -226,7 +228,7 @@ void out_reex(char *filestr)
 				if (flag_reex == NO)
 				{
 					flag_reex = YES;
-					printf(" | %3d. %-12s %-12s %-12s : group num = %d\n |      Failed exams: ", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
+					printf(" | %3d. %-20s %-20s %-20s : group num = %d\n |      Failed exams: ", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
 					++num;
 				}
 				for (; *(filestr + z) != '\0'; )
@@ -271,7 +273,8 @@ void out_grant(char *filestr)
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // массив структур
 	read(filestr, DATA); // получаем динамический массив структур всех студентов
 	printf(" | Granted students:\n");
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | ______________________________________________________________________________________\n");
+	printf(" | NUM  Surname              Name                 Middle name            Group\n | \n");
 	qsort(DATA, i, sizeof(struct student), cmp_by_name); // сортировка
 	for (int j = 0, num = 0; j < i; ++j)
 	{
@@ -285,7 +288,7 @@ void out_grant(char *filestr)
 		}
 		if (flag_grant == YES)
 		{
-			printf(" | %3d. %-12s %-12s %-12s : group num = %d\n", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
+			printf(" | %3d. %-20s %-20s %-20s : group num = %d\n", num + 1, DATA[j].name1, DATA[j].name2, DATA[j].name3, DATA[j].group);
 			++num;
 		}
 	}
@@ -301,7 +304,8 @@ void out_avg(char *filestr)
 	struct student* DATA = (struct student*)malloc(i * sizeof(struct student)); // несортированный массив структур
 	read(filestr, DATA); // получаем динамический массив структур всех студентов
 	printf(" | Educational rating:\n");
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | _____________________________________________________________________________________________________________\n");
+	printf(" | NUM  Surname              Name                 Middle name            Group                Average mark\n | \n");
 	for (int j = 0; j < i; ++j)
 	{
 		DATA[j].avg = 0;
@@ -315,7 +319,7 @@ void out_avg(char *filestr)
 	}
 	qsort(DATA, i, sizeof(struct student), cmp_by_avg); // сортировка
 	for (k = 0; k < i; ++k)
-		printf(" | %3d. %-12s %-12s %-12s : group num = %-6d : average mark = %.1f\n", k + 1, DATA[k].name1, DATA[k].name2, DATA[k].name3, DATA[k].group, DATA[k].avg);
+		printf(" | %3d. %-20s %-20s %-20s : group num = %-6d : average mark = %.1f\n", k + 1, DATA[k].name1, DATA[k].name2, DATA[k].name3, DATA[k].group, DATA[k].avg);
 	free(DATA);
 	return;
 }
@@ -325,10 +329,11 @@ void output(char *filestr, int EDGE, struct student *DATA) // вывод дан�
 	char c; // debug
 	int cnt;
 	int j;
-	printf(" | \n | NUM  Surname      Name         Middle name    Group\n | \n");
+	printf(" | ______________________________________________________________________________________\n");
+	printf(" | NUM  Surname              Name                 Middle name            Group\n | \n");
 	for (int i = 0; i < EDGE; ++i)
 	{
-		printf(" | %3d. %-12s %-12s %-12s : group num = %d\n |      Desciplines:", i+1, DATA[i].name1, DATA[i].name2, DATA[i].name3, DATA[i].group);
+		printf(" | %3d. %-20s %-20s %-20s : group num = %d\n |      Desciplines:", i+1, DATA[i].name1, DATA[i].name2, DATA[i].name3, DATA[i].group);
 		strcpy(filestr, DATA[i].disp);
 		for (j = 0, cnt = 0; *(filestr + j) != '\0'; ++cnt)
 		{
@@ -383,7 +388,7 @@ void include(char *filestr)
 	gets(x.name3);
 	printf(" | Enter number of disciplines: ");
 	scanf("%d", &end);
-	if (end < 0)
+	if (end < 1 || end > 10)
 	{
 		printf(" |  || Wrong number ||\n");
 		gets(filestr);
