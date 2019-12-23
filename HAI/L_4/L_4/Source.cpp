@@ -34,7 +34,7 @@ public:
 			sum += *(ptr + i);
 		}
 	}
-	void get()
+	void get() // change to show
 	{
 		cout << "Фамилия: " << name1 << endl;
 		cout << "Имя: " << name2 << endl;
