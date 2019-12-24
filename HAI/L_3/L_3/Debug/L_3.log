@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\zerko\documents\гуап 1842\3 семестр\языки высокого уровня\l_3\l_3\source.cpp(31): error C2059: синтаксическая ошибка: }
+c:\users\zerko\documents\гуап 1842\3 семестр\языки высокого уровня\l_3\l_3\source.cpp(55): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\users\zerko\documents\гуап 1842\3 семестр\языки высокого уровня\l_3\l_3\source.cpp(72): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note:  см. объявление "strcpy"
+c:\users\zerko\documents\гуап 1842\3 семестр\языки высокого уровня\l_3\l_3\source.cpp(86): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note:  см. объявление "strcpy"
