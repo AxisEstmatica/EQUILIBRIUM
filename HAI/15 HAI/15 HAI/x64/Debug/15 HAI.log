@@ -1,0 +1,3 @@
+﻿  Source.c
+c:\users\zerko\desktop\15 hai\15 hai\source.c(169): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+  15 HAI.vcxproj -> C:\Users\zerko\Desktop\15 HAI\x64\Debug\15 HAI.exe
