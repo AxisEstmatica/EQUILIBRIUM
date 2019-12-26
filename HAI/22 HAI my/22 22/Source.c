@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996) // отключение ошибки c4996
+#pragma warning(disable : 4996) // РѕС‚РєР»СЋС‡РµРЅРёРµ РѕС€РёР±РєРё c4996
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
@@ -9,7 +9,7 @@
 #define WR 50
 #define STR 2000
 
-int cmp(const void * a, const void * b) // функция сортироки по фамилии имени отчеству
+int cmp(const void * a, const void * b) // С„СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРєРё РїРѕ С„Р°РјРёР»РёРё РёРјРµРЅРё РѕС‚С‡РµСЃС‚РІСѓ
 {
 	const char* aa = *((const char**)a);
 	const char* bb = *((const char**)b);
@@ -21,7 +21,7 @@ int main(void)
 	char c;
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	printf("Введите строку: ");
+	printf("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: ");
 	char **str = (char**)malloc(sizeof(char*));
 	str[0] = (char*)malloc(WR*sizeof(char));
 	int i = 0;
@@ -34,7 +34,7 @@ int main(void)
 		//printf("%d, %c", c, c);
 	} while (strncmp((str[i-1]),".",1)!=0);
 	--i;
-	qsort(str, i-1, sizeof(str[0]), cmp); // сортировка
+	qsort(str, i-1, sizeof(str[0]), cmp); // СЃРѕСЂС‚РёСЂРѕРІРєР°
 	for (int j = 0; j < i; j++)
 	{
 		puts(str[j]);
