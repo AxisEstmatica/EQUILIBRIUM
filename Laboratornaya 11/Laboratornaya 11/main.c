@@ -56,7 +56,7 @@ void main(void)
 			if (*(str_ptr + i) == '-' || (*(str_ptr + i) >= '0' && *(str_ptr + i) <= '9'))
 			{
 				j = 0;
-				while (*(str_ptr + i) != '\0' && *(str_ptr + i) != ';' && *(str_ptr + i) != ' ' && *(str_ptr + i) != ',' && *(str_ptr + i) != '}' && *(str_ptr + i) != ']' && *(str_ptr + i) != '\n')
+				while (*(str_ptr + i) != '\0' && *(str_ptr + i) != ';' && *(str_ptr + i) != ' ' && *(str_ptr + i) != ',' && *(str_ptr + i) != '}' && *(str_ptr + i) != ']' && *(str_ptr + i) != '\n' && *(str_ptr + i) != ')')
 				{
 					num[j] = *(str_ptr + i);
 					++i;
