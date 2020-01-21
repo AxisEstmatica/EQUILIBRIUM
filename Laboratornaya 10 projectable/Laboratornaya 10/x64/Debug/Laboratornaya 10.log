@@ -1,8 +1,0 @@
-﻿  main.c
-c:\laboratornaya 10\laboratornaya 10\main.c(171): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
-c:\laboratornaya 10\laboratornaya 10\main.c(181): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
-c:\laboratornaya 10\laboratornaya 10\main.c(182): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
-c:\laboratornaya 10\laboratornaya 10\main.c(306): warning C4047: :: "int" отличается по уровням косвенного обращения от "void *"
-c:\laboratornaya 10\laboratornaya 10\main.c(307): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-c:\laboratornaya 10\laboratornaya 10\main.c(330): warning C4047: =: "char" отличается по уровням косвенного обращения от "char *"
-  Laboratornaya 10.vcxproj -> C:\Laboratornaya 10\x64\Debug\Laboratornaya 10.exe
