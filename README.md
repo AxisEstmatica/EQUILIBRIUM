@@ -1,4 +1,2 @@
-# Osnovy
+# For honor of fallen
 For magic
-
-Попытка - не пытка
