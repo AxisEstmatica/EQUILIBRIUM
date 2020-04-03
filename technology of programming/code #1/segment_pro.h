@@ -3,11 +3,11 @@
 class LINE_PRO : protected LINE
 {
 public:
-	void add(int val); // добавление элемента
-	int del(); // извлечение элемента
+	void add(int val); // РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
+	int del(); // РёР·РІР»РµС‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
 	int size();
-	void output(); // вывод очереди\ей
-	void copy(LINE_PRO& TMP); // копирование очереди
-	void merge(LINE_PRO& MAIN, LINE_PRO& COPY); // слияние очередей
-	float harmonic_avg(); // нахождение среднего гармонического
+	void output(); // РІС‹РІРѕРґ РѕС‡РµСЂРµРґРё\РµР№
+	void copy(LINE_PRO& TMP); // РєРѕРїРёСЂРѕРІР°РЅРёРµ РѕС‡РµСЂРµРґРё
+	void merge(LINE_PRO& MAIN, LINE_PRO& COPY); // СЃР»РёСЏРЅРёРµ РѕС‡РµСЂРµРґРµР№
+	float harmonic_avg(); // РЅР°С…РѕР¶РґРµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ РіР°СЂРјРѕРЅРёС‡РµСЃРєРѕРіРѕ
 };
