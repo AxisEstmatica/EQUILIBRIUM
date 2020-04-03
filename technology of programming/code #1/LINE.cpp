@@ -20,7 +20,7 @@ LINE::~LINE()
 
 void LINE::add(int val)
 {
-	ELMT* dimension = new ELMT; // îòïðàâëÿåì äàííûå â ñâîáîäíîå ïëàâàíèå
+	ELMT* dimension = new ELMT; // Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð² ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ð¾Ðµ Ð¿Ð»Ð°Ð²Ð°Ð½Ð¸Ðµ
 	dimension->prev = end;
 	end = dimension;
 	dimension->value = val;
@@ -49,7 +49,7 @@ int LINE::del()
 		tmp->prev = nullptr;
 		--NUM;
 	}
-	cout << "| Èçâëå÷¸í ïåðâûé ýëåìåíò ñî çíà÷åíèåì: [" << tmp_val << "]" << endl;
+	cout << "| Ð˜Ð·Ð²Ð»ÐµÑ‡Ñ‘Ð½ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÐµÐ¼: [" << tmp_val << "]" << endl;
 	return tmp_val;
 }
 
@@ -74,7 +74,7 @@ void LINE::output()
 
 void LINE::copy(LINE& TMP)
 {
-	while (this->size()) // î÷èùåíèå î÷åðåäè
+	while (this->size()) // Ð¾Ñ‡Ð¸Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸
 	{
 		this->del();
 	}
@@ -95,7 +95,7 @@ void LINE::copy(LINE& TMP)
 
 void LINE::merge(LINE& MAIN, LINE& COPY)
 {
-	while (this->size()) // î÷èùåíèå î÷åðåäè
+	while (this->size()) // Ð¾Ñ‡Ð¸Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸
 	{
 		this->del();
 	}
