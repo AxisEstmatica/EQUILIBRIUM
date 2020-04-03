@@ -3,5 +3,5 @@
 class LINE_PUB : public LINE
 {
 public:
-	float harmonic_avg(); // нахождение среднего гармонического
+	float harmonic_avg(); // РЅР°С…РѕР¶РґРµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ РіР°СЂРјРѕРЅРёС‡РµСЃРєРѕРіРѕ
 };
