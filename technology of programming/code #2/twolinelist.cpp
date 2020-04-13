@@ -18,7 +18,7 @@ TLINE::~TLINE()
 }
 void TLINE::add_to_end(int val)
 {
-	ELMT* newelmt = new ELMT; // новый элемент
+	ELMT* newelmt = new ELMT; // РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚
 	if (START == nullptr)
 	{
 		START = newelmt;
@@ -53,13 +53,13 @@ void TLINE::erase()
 			--NUM;
 		}
 	}
-	cout << "| Очищение списка завершено.\n";
+	cout << "| РћС‡РёС‰РµРЅРёРµ СЃРїРёСЃРєР° Р·Р°РІРµСЂС€РµРЅРѕ.\n";
 }
 void TLINE::ptr_on_start()
 {
 	if (START == nullptr)
 	{
-		cout << "| Список пуст.\n";
+		cout << "| РЎРїРёСЃРѕРє РїСѓСЃС‚.\n";
 		return;
 	}
 	ptr = START;
@@ -68,7 +68,7 @@ void TLINE::ptr_right()
 {
 	if (START == nullptr)
 	{
-		cout << "| Список пуст.\n";
+		cout << "| РЎРїРёСЃРѕРє РїСѓСЃС‚.\n";
 		return;
 	}
 	if (ptr == nullptr)
@@ -77,7 +77,7 @@ void TLINE::ptr_right()
 	}
 	if (ptr->next == nullptr)
 	{
-		cout << "| Достигнут конец списка.\n";
+		cout << "| Р”РѕСЃС‚РёРіРЅСѓС‚ РєРѕРЅРµС† СЃРїРёСЃРєР°.\n";
 	}
 	else
 	{
