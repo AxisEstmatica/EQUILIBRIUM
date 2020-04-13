@@ -3,12 +3,12 @@ class CEIL
 {
 public:
 	CEIL();
-	explicit CEIL(int x = 0); // параметр по умолчанию, без инициализации присвоит классу значение value = 0
+	explicit CEIL(int x = 0); // РїР°СЂР°РјРµС‚СЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, Р±РµР· РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РїСЂРёСЃРІРѕРёС‚ РєР»Р°СЃСЃСѓ Р·РЅР°С‡РµРЅРёРµ value = 0
 	CEIL& operator --(); // prefix
 	CEIL& operator ++();
 	friend CEIL operator ++(CEIL &x, int); // int is postfix
 	friend CEIL operator --(CEIL &x, int); // ptr as friend
-	CEIL& operator ()(int x); // перегрузка чтоб принималась ф-я
+	CEIL& operator ()(int x); // РїРµСЂРµРіСЂСѓР·РєР° С‡С‚РѕР± РїСЂРёРЅРёРјР°Р»Р°СЃСЊ С„-СЏ
 	void show();
 private:
 	int value;;
