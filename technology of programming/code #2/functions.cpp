@@ -3,7 +3,7 @@ void to_main_menu()
 {
 	int menu;
 	menu = 0;
-	cout << "| Ââåäèòå 4 ÷òîáû âåðíóòüñÿ â ãëàâíîå ìåíþ." << endl;
+	cout << "| Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 4 Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð²ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ Ð² Ð³Ð»Ð°Ð²Ð½Ð¾Ðµ Ð¼ÐµÐ½ÑŽ." << endl;
 	while (menu != 4)
 	{
 		cout << "| ";
@@ -14,7 +14,7 @@ void to_main_menu()
 int title_one()
 {
 	int value = 0;
-	cout << "| Ââåäèòå íà÷àëüíîå çíà÷åíèå B." << endl;
+	cout << "| Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ B." << endl;
 	cout << "| ";
 	cin >> value;
 	return value;
