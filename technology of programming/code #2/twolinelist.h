@@ -2,13 +2,13 @@
 #include "element.h"
 #include <iostream>
 using namespace std;
-class TLINE // класс двусвязного линейного списка (ДЛС)
+class TLINE // РєР»Р°СЃСЃ РґРІСѓСЃРІСЏР·РЅРѕРіРѕ Р»РёРЅРµР№РЅРѕРіРѕ СЃРїРёСЃРєР° (Р”Р›РЎ)
 {
 public:
 	TLINE();
 	~TLINE();
-	void add_to_end(int val); // добавление элемента в конец ДЛС
-	void erase(); // удаление списка
+	void add_to_end(int val); // РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† Р”Р›РЎ
+	void erase(); // СѓРґР°Р»РµРЅРёРµ СЃРїРёСЃРєР°
 	void ptr_on_start();
 	void ptr_right();
 	int size();
@@ -26,11 +26,11 @@ public:
 	bool operator >= (int X);
 	friend bool operator != (int X, const TLINE& right);
 	bool operator != (int X);
-	TLINE& operator ()(int X); // перегрузка чтоб принималась ф-я
-	TLINE& operator ()(int X, int Z); // перегрузка чтоб принималась ф-я
+	TLINE& operator ()(int X); // РїРµСЂРµРіСЂСѓР·РєР° С‡С‚РѕР± РїСЂРёРЅРёРјР°Р»Р°СЃСЊ С„-СЏ
+	TLINE& operator ()(int X, int Z); // РїРµСЂРµРіСЂСѓР·РєР° С‡С‚РѕР± РїСЂРёРЅРёРјР°Р»Р°СЃСЊ С„-СЏ
 private:
-	int NUM; // кол-во элементов ДЛС
+	int NUM; // РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ Р”Р›РЎ
 	ELMT *START;
 	ELMT *END;
-	ELMT *ptr; // указатель на рабочий элемент ДЛС
+	ELMT *ptr; // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЂР°Р±РѕС‡РёР№ СЌР»РµРјРµРЅС‚ Р”Р›РЎ
 };
