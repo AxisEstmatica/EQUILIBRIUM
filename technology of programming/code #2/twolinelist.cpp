@@ -227,8 +227,8 @@ TLINE& TLINE::operator ()(int X, int Z)
 	{
 		ptr_right(); ++i;
 	}
-	i = 0;
-	while (i < Z - 1)
+	i = 0;  tmp = ptr;
+	while (i < Z - X)
 	{
 		MAS[i++] = tmp->value;
 		tmp = tmp->next;
